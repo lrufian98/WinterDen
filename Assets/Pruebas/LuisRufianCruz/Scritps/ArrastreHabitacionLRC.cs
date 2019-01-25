@@ -19,7 +19,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Habitacion"))
+        if (col.gameObject.CompareTag("HabitacionElectricidad")|| col.gameObject.CompareTag("HabitacionAgua")|| col.gameObject.CompareTag("HabitacionComida")|| col.gameObject.CompareTag("HabitacionVeterinario")|| col.gameObject.CompareTag("HabitacionDormitorio")|| col.gameObject.CompareTag("HabitacionPuertaEntrada"))
         {
             if (Mathf.Abs(rb.velocity.x) < velocidadTope)
             {

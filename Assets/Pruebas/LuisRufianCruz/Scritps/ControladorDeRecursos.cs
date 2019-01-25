@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GeneradorElectricidad : MonoBehaviour
+public class ControladorDeRecursos : MonoBehaviour
 {
+    public static int electricidad;
+
+    public Text electricidadUI;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +19,6 @@ public class GeneradorElectricidad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        electricidadUI.text = "" + electricidad;
     }
 }
