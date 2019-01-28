@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ControladorDeRecursos : MonoBehaviour
 {
     public static int electricidad;
+    public static int capacidadElectricidad = 100;
 
     public Text electricidadUI;
 
@@ -19,6 +20,6 @@ public class ControladorDeRecursos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        electricidadUI.text = "" + electricidad;
+        electricidadUI.text = electricidad.ToString();
     }
 }
