@@ -6,8 +6,13 @@ using UnityEngine;
 public class GeneradorDeRecursos : MonoBehaviour
 {
     bool dentroElectricidad = false;  //Bool para determinar si el personaje se encuentra en la habitación de electricidad
+    bool dentroComida = false;
+    bool dentroAgua = false;
+
     bool produciendo = false;   //Bool para determinar si el personaje está produciendo algún recurso
     public float tiempo = 1;    // Float para saber el tiempo que tardan los recursos en generarse
+
+    public int cantidadRecursosBaseGenerados;
     
 
     // Start is called before the first frame update
@@ -19,21 +24,9 @@ public class GeneradorDeRecursos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dentroElectricidad)         //Condicional dentro de update para que se sepa siempre si el personaje está dentro de la habitación de electricidad
-        {
-            if (!produciendo)           //Si el personaje no está produciendo ningún recurso, activa el bool "produciendo" y comienza la corutina que produce electricidad
-            {
-                produciendo = true;
-                StartCoroutine(sumaElectricidad());
-                
-
-            }
-        }
-        else                            // Si no está dentro de la habitación, se detienen todas la corutinas que se estén ejecutando en este personaje, y desactiva el bool que indica que se están produciendo recursos
-        {
-            StopAllCoroutines();
-            produciendo = false;
-        }
+             
+        
+        
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -42,27 +35,114 @@ public class GeneradorDeRecursos : MonoBehaviour
         {
 
             dentroElectricidad = true;
-            
+            if (!produciendo)
+            {
+                produciendo = true;
+                StartCoroutine(generarRecursos());
+            }
+
+        }
+        if (col.gameObject.CompareTag("HabitacionComida"))        //Cuando el personaje entra y está en la habitación de comida activa un bool que indica que está dentro de la habitación de comida
+        {
+
+            dentroComida = true;
+            if (!produciendo)
+            {
+                produciendo = true;
+                StartCoroutine(generarRecursos());
+            }
+
+        }
+        if (col.gameObject.CompareTag("HabitacionAgua"))        //Cuando el personaje entra y está en la habitación de comida activa un bool que indica que está dentro de la habitación de comida
+        {
+
+            dentroAgua = true;
+            if (!produciendo)
+            {
+                produciendo = true;
+                StartCoroutine(generarRecursos());
+            }
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)             
     {
-        if (col.gameObject.CompareTag("HabitacionElectricidad"))        //Cuando el personaje sale de la habitación de electricidad desactiva un bool que indica que está dentro de la habitación de electricidad
+        if (
+            col.gameObject.CompareTag("HabitacionElectricidad") || 
+            col.gameObject.CompareTag("HabitacionComida") ||
+            col.gameObject.CompareTag("HabitacionAgua")
+            )        
         {
                                                                     
             dentroElectricidad = false;
+            dentroComida = false;
+            dentroComida = false;
+            StopAllCoroutines();
+            produciendo = false;
 
         }
+        
     }
-
+    /*
     IEnumerator sumaElectricidad()                                      //Corutina para generar el recurso de electricidad mientras la cantidad de electricidad almacenada sea menor a la capacidad de almacenaje de electricidad
     {
-        while (produciendo) { 
+        while (produciendo)
+        { 
             yield return new WaitForSeconds(tiempo);
             if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
             {
-                ControladorDeRecursos.electricidad++;
+                ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
+            }
+        }
+    }
+    IEnumerator sumaComida()                                      //Corutina para generar el recurso de comida mientras la cantidad de comida almacenada sea menor a la capacidad de almacenaje de comida
+    {
+        while (produciendo)
+        {
+            yield return new WaitForSeconds(tiempo);
+            if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
+            {
+                ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
+            }
+        }
+    }
+    */
+
+    IEnumerator generarRecursos()
+    {
+        while (produciendo)
+        {
+            if (dentroComida)
+            {
+
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
+                {
+                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
+                }
+
+            }
+            else if (dentroElectricidad)
+            {
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
+                {
+                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
+                }
+            }
+            else if (dentroAgua)
+            {
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.agua < ControladorDeRecursos.capacidadAgua)
+                {
+                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados;
+                }
+
+            }
+            else
+            {
+                produciendo = false;
             }
         }
     }

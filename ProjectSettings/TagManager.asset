@@ -7,6 +7,11 @@ TagManager:
   - Habitacion
   - Pared
   - HabitacionElectricidad
+  - HabitacionComida
+  - HabitacionAgua
+  - HabitacionVeterinaria
+  - HabitacionDormitorio
+  - HabitacionPuertaEntrada
   layers:
   - Default
   - TransparentFX
