@@ -9,7 +9,7 @@ TagManager:
   - HabitacionElectricidad
   - HabitacionComida
   - HabitacionAgua
-  - HabitacionVeterinaria
+  - HabitacionVeterinario
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
   layers:

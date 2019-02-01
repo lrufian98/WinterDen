@@ -14,10 +14,14 @@ public class ControladorDeRecursos : MonoBehaviour
     public static int agua;
     public static int capacidadAgua = 100;
 
+    public static int vendas;
+    public static int capacidadVendas = 10;
+
 
     public Text electricidadUI;
     public Text comidaUI;
     public Text aguaUI;
+    public Text vendasUI;
 
 
     // Start is called before the first frame update
@@ -32,5 +36,6 @@ public class ControladorDeRecursos : MonoBehaviour
         electricidadUI.text = electricidad.ToString();
         comidaUI.text = comida.ToString();
         aguaUI.text = agua.ToString();
+        vendasUI.text = vendas.ToString();
     }
 }
