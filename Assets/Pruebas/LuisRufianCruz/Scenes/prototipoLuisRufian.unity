@@ -654,7 +654,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &316527135
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -893,7 +893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &579232270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2177,6 +2177,20 @@ MonoBehaviour:
   enCombate: 0
   scriptEnlaceUI: {fileID: 780585991}
   miScript: {fileID: 5957588267771774392}
+  aptitud: 0
+  expAp: 0
+  carisma: 0
+  expCar: 0
+  tecnica: 0
+  expTec: 0
+  inteligencia: 0
+  expInt: 0
+  vida: 0
+  expVid: 0
+  energia: 0
+  expEn: 0
+  suerte: 0
+  expSu: 0
 --- !u!1001 &5957588269311336748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2244,5 +2258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5957588267771774387, guid: b530520964cdc4a4eab7e8f62e6bd2e1,
+        type: 3}
+      propertyPath: statsPJ
+      value: 
+      objectReference: {fileID: 5957588267771774392}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b530520964cdc4a4eab7e8f62e6bd2e1, type: 3}

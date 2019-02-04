@@ -13,10 +13,44 @@ public class EstadisticasPJ : MonoBehaviour
     public GestorBotonCuracion scriptEnlaceUI;
     public EstadisticasPJ miScript;
 
+    public int aptitud;
+    public float expAp;
+
+    public int carisma;
+    public float expCar;
+
+    public int tecnica;
+    public float expTec;
+
+    public int inteligencia;
+    public float expInt;
+
+    public int vida;
+    public float expVid;
+
+    public int energia;
+    public float expEn;
+
+    public int suerte;
+    public float expSu;
+
+    int nivelMaximo = 10;
+
+
     // Start is called before the first frame update
     void Start()
     {
         vidaActualConejo = vidaMaxConejo;
+
+        aptitud = Random.Range(1, 4);
+        carisma = Random.Range(1, 4);
+        tecnica = Random.Range(1, 4);
+        inteligencia = Random.Range(1, 4);
+        vida = Random.Range(1, 4);
+        energia = Random.Range(1, 4);
+        suerte = Random.Range(1, 4);
+
+
     }
 
     // Update is called once per frame
@@ -48,7 +82,7 @@ public class EstadisticasPJ : MonoBehaviour
         regenerando = false;
     }
 
-    public void usaVendas()
+    public void UsaVendas()
     {
         if (ControladorDeRecursos.vendas>0)
         {

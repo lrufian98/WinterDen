@@ -24,7 +24,7 @@ public class GestorBotonCuracion : MonoBehaviour
         Debug.Log("Boton Pulsado");
         if(scriptPJ != null)
         {
-            scriptPJ.usaVendas();
+            scriptPJ.UsaVendas();
 
         }
         

@@ -16,6 +16,8 @@ public class GeneradorDeRecursos : MonoBehaviour
 
     public int cantidadRecursosBaseGenerados;
     public int cantidadVendasGeneradas;
+
+    public EstadisticasPJ statsPJ;
     
 
     // Start is called before the first frame update
@@ -42,6 +44,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
         }
@@ -53,6 +56,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
         }
@@ -64,6 +68,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
         }
@@ -74,6 +79,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
         }
     }
@@ -135,6 +141,51 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 yield return new WaitForSeconds(tiempoVendas);
                 if(ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
+                {
+                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas;
+                }
+            }
+            else
+            {
+                produciendo = false;
+            }
+        }
+    }
+    IEnumerator generarExperiencia()
+    {
+        while (produciendo)
+        {
+            if (dentroComida)
+            {
+
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
+                {
+                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
+                }
+
+            }
+            else if (dentroElectricidad)
+            {
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
+                {
+                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
+                }
+            }
+            else if (dentroAgua)
+            {
+                yield return new WaitForSeconds(tiempo);
+                if (ControladorDeRecursos.agua < ControladorDeRecursos.capacidadAgua)
+                {
+                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados;
+                }
+
+            }
+            else if (dentroVet)
+            {
+                yield return new WaitForSeconds(tiempoVendas);
+                if (ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
                 {
                     ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas;
                 }
