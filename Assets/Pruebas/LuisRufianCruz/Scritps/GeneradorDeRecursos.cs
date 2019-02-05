@@ -18,6 +18,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     public int cantidadVendasGeneradas;
 
     public EstadisticasPJ statsPJ;
+    public float tiempoExp;
     
 
     // Start is called before the first frame update
@@ -116,7 +117,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
                 {
-                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados + statsPJ.aptitud;
                 }
 
             }
@@ -125,7 +126,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
                 {
-                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados + statsPJ.energia;
                 }
             }
             else if (dentroAgua)
@@ -133,7 +134,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.agua < ControladorDeRecursos.capacidadAgua)
                 {
-                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados + statsPJ.tecnica;
                 }
 
             }
@@ -142,7 +143,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempoVendas);
                 if(ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
                 {
-                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas;
+                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas + statsPJ.inteligencia/2;
                 }
             }
             else
@@ -158,37 +159,25 @@ public class GeneradorDeRecursos : MonoBehaviour
             if (dentroComida)
             {
 
-                yield return new WaitForSeconds(tiempo);
-                if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
-                {
-                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
-                }
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expAp++;
 
             }
             else if (dentroElectricidad)
             {
-                yield return new WaitForSeconds(tiempo);
-                if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
-                {
-                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
-                }
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expEn++;
             }
             else if (dentroAgua)
             {
-                yield return new WaitForSeconds(tiempo);
-                if (ControladorDeRecursos.agua < ControladorDeRecursos.capacidadAgua)
-                {
-                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados;
-                }
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expTec++;
 
             }
             else if (dentroVet)
             {
-                yield return new WaitForSeconds(tiempoVendas);
-                if (ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
-                {
-                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas;
-                }
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expInt++;
             }
             else
             {

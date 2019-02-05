@@ -35,6 +35,7 @@ public class EstadisticasPJ : MonoBehaviour
     public float expSu;
 
     int nivelMaximo = 10;
+    public int expBase = 500;
 
 
     // Start is called before the first frame update
@@ -64,7 +65,28 @@ public class EstadisticasPJ : MonoBehaviour
             }
             
         }
-        
+
+        if (expAp > expBase + expBase*aptitud)
+        {
+            aptitud++;
+            expAp = 0;
+        }
+        if (expEn > expBase + expBase*energia)
+        {
+            energia++;
+            expEn = 0;
+        }
+        if (expTec > expBase + expBase*tecnica)
+        {
+            tecnica++;
+            expTec = 0;
+        }
+        if (expInt > expBase + expBase*inteligencia)
+        {
+            inteligencia++;
+            expInt = 0;
+        }
+
     }
 
   
