@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: 1
+  tiempoVendas: 5
   cantidadRecursosBaseGenerados: 5
+  cantidadVendasGeneradas: 1

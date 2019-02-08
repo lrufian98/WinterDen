@@ -8,11 +8,17 @@ public class GeneradorDeRecursos : MonoBehaviour
     bool dentroElectricidad = false;  //Bool para determinar si el personaje se encuentra en la habitación de electricidad
     bool dentroComida = false;
     bool dentroAgua = false;
+    bool dentroVet = false;
 
     bool produciendo = false;   //Bool para determinar si el personaje está produciendo algún recurso
     public float tiempo = 1;    // Float para saber el tiempo que tardan los recursos en generarse
+    public float tiempoVendas = 5;
 
     public int cantidadRecursosBaseGenerados;
+    public int cantidadVendasGeneradas;
+
+    public EstadisticasPJ statsPJ;
+    public float tiempoExp;
     
 
     // Start is called before the first frame update
@@ -39,6 +45,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
         }
@@ -50,6 +57,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
         }
@@ -61,8 +69,19 @@ public class GeneradorDeRecursos : MonoBehaviour
             {
                 produciendo = true;
                 StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
             }
 
+        }
+        if (col.gameObject.CompareTag("HabitacionVeterinario"))
+        {
+            dentroVet = true;
+            if(!produciendo)
+            {
+                produciendo = true;
+                StartCoroutine(generarRecursos());
+                StartCoroutine(generarExperiencia());
+            }
         }
     }
 
@@ -71,43 +90,22 @@ public class GeneradorDeRecursos : MonoBehaviour
         if (
             col.gameObject.CompareTag("HabitacionElectricidad") || 
             col.gameObject.CompareTag("HabitacionComida") ||
-            col.gameObject.CompareTag("HabitacionAgua")
+            col.gameObject.CompareTag("HabitacionAgua") ||
+            col.gameObject.CompareTag("HabitacionVeterinario")
             )        
         {
                                                                     
             dentroElectricidad = false;
             dentroComida = false;
-            dentroComida = false;
+            dentroAgua = false;
+            dentroVet = false;
             StopAllCoroutines();
             produciendo = false;
 
         }
         
     }
-    /*
-    IEnumerator sumaElectricidad()                                      //Corutina para generar el recurso de electricidad mientras la cantidad de electricidad almacenada sea menor a la capacidad de almacenaje de electricidad
-    {
-        while (produciendo)
-        { 
-            yield return new WaitForSeconds(tiempo);
-            if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
-            {
-                ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
-            }
-        }
-    }
-    IEnumerator sumaComida()                                      //Corutina para generar el recurso de comida mientras la cantidad de comida almacenada sea menor a la capacidad de almacenaje de comida
-    {
-        while (produciendo)
-        {
-            yield return new WaitForSeconds(tiempo);
-            if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
-            {
-                ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
-            }
-        }
-    }
-    */
+    
 
     IEnumerator generarRecursos()
     {
@@ -119,7 +117,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.comida < ControladorDeRecursos.capacidadComida)
                 {
-                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.comida = ControladorDeRecursos.comida + cantidadRecursosBaseGenerados + statsPJ.aptitud;
                 }
 
             }
@@ -128,7 +126,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.electricidad < ControladorDeRecursos.capacidadElectricidad)
                 {
-                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.electricidad = ControladorDeRecursos.electricidad + cantidadRecursosBaseGenerados + statsPJ.energia;
                 }
             }
             else if (dentroAgua)
@@ -136,9 +134,50 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempo);
                 if (ControladorDeRecursos.agua < ControladorDeRecursos.capacidadAgua)
                 {
-                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados;
+                    ControladorDeRecursos.agua = ControladorDeRecursos.agua + cantidadRecursosBaseGenerados + statsPJ.tecnica;
                 }
 
+            }
+            else if (dentroVet)
+            {
+                yield return new WaitForSeconds(tiempoVendas);
+                if(ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
+                {
+                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas + statsPJ.inteligencia/2;
+                }
+            }
+            else
+            {
+                produciendo = false;
+            }
+        }
+    }
+    IEnumerator generarExperiencia()
+    {
+        while (produciendo)
+        {
+            if (dentroComida)
+            {
+
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expAp++;
+
+            }
+            else if (dentroElectricidad)
+            {
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expEn++;
+            }
+            else if (dentroAgua)
+            {
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expTec++;
+
+            }
+            else if (dentroVet)
+            {
+                yield return new WaitForSeconds(tiempoExp);
+                statsPJ.expInt++;
             }
             else
             {
