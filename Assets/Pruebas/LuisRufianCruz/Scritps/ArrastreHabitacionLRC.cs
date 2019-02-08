@@ -9,11 +9,20 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     public float velocidadTope;
     public Transform habitacionActual;
     bool fueraDeHabitacion;
+    SpriteRenderer spritePJ;
+
+    Animator animPJ;
+
+    
+    public Vector2 vectorVelocidad;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spritePJ = GetComponent<SpriteRenderer>();
+        animPJ = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +32,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         {
             if (Mathf.Abs(rb.velocity.x) < velocidadTope)
             {
-                rb.AddForce(new Vector2(1, 0) * velocidad);
+                rb.AddForce(vectorVelocidad * velocidad);
             }
             habitacionActual = col.transform;
             fueraDeHabitacion = false;
@@ -40,8 +49,13 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         }
     }
 
+    
 
 
+    void EscribirEnCuaderno()
+    {
+        animPJ.SetBool("Escribir",true);
+    }
 
 
 
@@ -50,7 +64,22 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         if (col.gameObject.CompareTag("Pared"))
         {
             velocidad = velocidad *-1;
+            spritePJ.flipX = !spritePJ.flipX;
+            Invoke("EscribirEnCuaderno", 1f);
         }
+    }
+
+    public void PararMovimiento()
+    {
+        vectorVelocidad.x = 0;
+        Invoke("ReiniciarMovimiento", Random.Range(1f, 3f));
+    }
+
+    public void ReiniciarMovimiento()
+    {
+        animPJ.SetBool("Escribir", false);
+        vectorVelocidad.x = 1;
+        rb.AddForce(vectorVelocidad * velocidad);
     }
 
     private void OnMouseDrag()
