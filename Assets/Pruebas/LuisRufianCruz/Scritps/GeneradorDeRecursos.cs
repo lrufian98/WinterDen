@@ -105,6 +105,8 @@ public class GeneradorDeRecursos : MonoBehaviour
         }
         
     }
+
+    
     
 
     IEnumerator generarRecursos()

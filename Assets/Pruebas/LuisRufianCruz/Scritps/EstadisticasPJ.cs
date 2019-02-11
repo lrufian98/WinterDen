@@ -68,25 +68,25 @@ public class EstadisticasPJ : MonoBehaviour
 
         if (expAp > expBase + expBase*aptitud)
         {
-            aptitud++;
+            if (aptitud < nivelMaximo) aptitud++;
             expAp = 0;
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + aptitud;
         }
         if (expEn > expBase + expBase*energia)
         {
-            energia++;
+            if (energia < nivelMaximo)energia++;
             expEn = 0;
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + energia;
         }
         if (expTec > expBase + expBase*tecnica)
         {
-            tecnica++;
+            if(tecnica < nivelMaximo)tecnica++;
             expTec = 0;
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + tecnica;
         }
         if (expInt > expBase + expBase*inteligencia)
         {
-            inteligencia++;
+            if(inteligencia < nivelMaximo) inteligencia++;
             expInt = 0;
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + inteligencia;
         }

@@ -43,4 +43,17 @@ public class ControladorDeRecursos : MonoBehaviour
         vendasUI.text = vendas.ToString();
         dineroUI.text = dinero.ToString();
     }
+
+    public void DineroExpedicion()
+    {
+
+        dinero = dinero + Random.Range(250,1000);
+
+    }
+    public void DineroSaqueo()
+    {
+        dinero = dinero + Random.Range(150,200);
+    }
+
+
 }
