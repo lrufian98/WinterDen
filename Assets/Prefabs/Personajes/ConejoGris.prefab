@@ -34,8 +34,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4384925, y: 2.141011}
-  m_Size: {x: 1.535255, y: 4.445693}
+  m_Offset: {x: 0.06522279, y: 2.141011}
+  m_Size: {x: 1.9857016, y: 4.445693}
   m_Direction: 0
 --- !u!114 &1655929699
 MonoBehaviour:
@@ -103,6 +103,7 @@ MonoBehaviour:
   velocidad: 10
   velocidadTope: 1
   habitacionActual: {fileID: 0}
+  vectorVelocidad: {x: 1, y: 0}
 --- !u!1001 &2160555367964676366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +115,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Personaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445107913224255160, guid: 571e8951685ef5544aad88cd6fd8addd,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445107913224255160, guid: 571e8951685ef5544aad88cd6fd8addd,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445107913224255161, guid: 571e8951685ef5544aad88cd6fd8addd,
         type: 3}
@@ -173,28 +184,18 @@ PrefabInstance:
     - target: {fileID: 6445107913224255161, guid: 571e8951685ef5544aad88cd6fd8addd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1739555
+      value: 0.19396354
       objectReference: {fileID: 0}
     - target: {fileID: 6445107913224255161, guid: 571e8951685ef5544aad88cd6fd8addd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17395547
+      value: 0.1939635
       objectReference: {fileID: 0}
     - target: {fileID: 6445107913224255161, guid: 571e8951685ef5544aad88cd6fd8addd,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.17395547
+      value: 0.1939635
       objectReference: {fileID: 0}
-    - target: {fileID: 6445107913224255160, guid: 571e8951685ef5544aad88cd6fd8addd,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6445107913224255163, guid: 571e8951685ef5544aad88cd6fd8addd,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 16528290c4faf63488ee8bb905b4e279, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 571e8951685ef5544aad88cd6fd8addd, type: 3}
 --- !u!1 &4938842229244651444 stripped
