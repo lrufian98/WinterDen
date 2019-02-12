@@ -23,14 +23,7 @@ public class menuConstruir : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        counter++;
-        if (counter % 2 == 1)
-        {
+   
             menuConstruccion.SetActive(true);
-        }
-        else
-        {
-            menuConstruccion.SetActive(false);
-        }
     }
 }
