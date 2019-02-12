@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class ControladorDeRecursos : MonoBehaviour
 {
-    public static int electricidad;
-    public static int capacidadElectricidad = 100;
+    public static float electricidad;
+    public static float capacidadElectricidad = 100f;
 
-    public static int comida;
-    public static int capacidadComida = 100;
+    public static float comida;
+    public static float capacidadComida = 100;
 
-    public static int agua;
-    public static int capacidadAgua = 100;
+    public static float agua;
+    public static float capacidadAgua = 100;
 
     public static int vendas;
     public static int capacidadVendas = 10;
@@ -20,9 +20,11 @@ public class ControladorDeRecursos : MonoBehaviour
     public static int dinero;
 
     public Image barraElectricidad;
+    public Image barraComida;
+    public Image barraAgua;
 
 
-   
+
     public Text vendasUI;
     public Text dineroUI;
 
@@ -36,10 +38,24 @@ public class ControladorDeRecursos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-        vendasUI.text = vendas.ToString();
-        dineroUI.text = dinero.ToString();
-        barraElectricidad.fillAmount =  capacidadElectricidad;
+      if(vendasUI != null)
+        {
+            vendasUI.text = vendas.ToString();
+        }
+        else
+        {
+            Debug.LogError("Hace falta linkar vendas");
+        }
+        if (dineroUI)
+        {
+            dineroUI.text = dinero.ToString();
+        }
+       
+        barraElectricidad.fillAmount =  electricidad/capacidadElectricidad;
+        barraComida.fillAmount = comida / capacidadComida;
+        barraAgua.fillAmount = agua / capacidadAgua;
+        Debug.Log("elect" + electricidad + " cap" + capacidadElectricidad);
+        Debug.Log(electricidad / capacidadElectricidad);
     }
 
     public void DineroExpedicion()
