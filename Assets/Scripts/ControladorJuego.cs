@@ -21,6 +21,10 @@ public class ControladorJuego : MonoBehaviour
     {
         SceneManager.LoadScene("PantallaMadrigueras");
     }
+    public void CargaPantallaInicio()
+    {
+        SceneManager.LoadScene("PantallaInicial");
+    }
 
 
 }
