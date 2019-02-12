@@ -18,12 +18,11 @@ public class ControladorDeRecursos : MonoBehaviour
     public static int capacidadVendas = 10;
 
     public static int dinero;
-    
+
+    public Image barraElectricidad;
 
 
-    public Text electricidadUI;
-    public Text comidaUI;
-    public Text aguaUI;
+   
     public Text vendasUI;
     public Text dineroUI;
 
@@ -37,11 +36,10 @@ public class ControladorDeRecursos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        electricidadUI.text = electricidad.ToString();
-        comidaUI.text = comida.ToString();
-        aguaUI.text = agua.ToString();
+      
         vendasUI.text = vendas.ToString();
         dineroUI.text = dinero.ToString();
+        barraElectricidad.fillAmount =  capacidadElectricidad;
     }
 
     public void DineroExpedicion()
