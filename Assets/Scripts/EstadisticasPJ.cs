@@ -37,6 +37,11 @@ public class EstadisticasPJ : MonoBehaviour
     int nivelMaximo = 10;
     public int expBase = 500;
 
+    public List<string> listaNombres;
+    public List<string> listaApellidos;
+    public string nombre;
+    public string apellido;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +55,9 @@ public class EstadisticasPJ : MonoBehaviour
         vida = Random.Range(1, 4);
         energia = Random.Range(1, 4);
         suerte = Random.Range(1, 4);
+
+        nombre = listaNombres[Random.Range(0, 29)];
+        apellido = listaApellidos[Random.Range(0, 29)];
 
 
     }
@@ -130,6 +138,8 @@ public class EstadisticasPJ : MonoBehaviour
     {
         scriptEnlaceUI.scriptPJ = miScript;
     }
+
+
 
 
 }
