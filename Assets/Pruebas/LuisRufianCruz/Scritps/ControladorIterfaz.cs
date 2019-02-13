@@ -6,6 +6,9 @@ public class ControladorIterfaz : MonoBehaviour
 {
 
     public Animator animMenuMenus;
+    public Animator animMenuAjustes;
+
+    bool activaMenuAjustes = false;
     bool activaMenuMenus = false;
 
     // Start is called before the first frame update
@@ -25,6 +28,12 @@ public class ControladorIterfaz : MonoBehaviour
     {
         activaMenuMenus = !activaMenuMenus;
         animMenuMenus.SetBool("MenuActivo", activaMenuMenus);
+    }
+
+    public void ApareceMenuAjustes()
+    {
+        activaMenuAjustes = !activaMenuAjustes;
+        animMenuAjustes.SetBool("MenuActivo", activaMenuAjustes);
     }
 
 }

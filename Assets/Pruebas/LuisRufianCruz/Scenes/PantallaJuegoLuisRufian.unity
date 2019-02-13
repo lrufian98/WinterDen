@@ -249,17 +249,17 @@ PrefabInstance:
     - target: {fileID: 2708375184914306627, guid: 4017609123750914db34b7c16a407ea1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.38685083
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708375184914306627, guid: 4017609123750914db34b7c16a407ea1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.38685083
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708375184914306627, guid: 4017609123750914db34b7c16a407ea1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9210735
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708375184914306627, guid: 4017609123750914db34b7c16a407ea1,
         type: 3}
@@ -301,8 +301,169 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2708375184914306624, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_Name
+      value: panelAjustes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1187497405}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ApareceMenuAjustes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185233817740, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 807621868}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CargaPantallaInicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708375185879230623, guid: 4017609123750914db34b7c16a407ea1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4017609123750914db34b7c16a407ea1, type: 3}
+--- !u!1 &129358882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1503553177853446530, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &129358884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503553177853446528, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129358882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &129358886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129358882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 129358884}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 610172248}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &341097352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2708375184914306624, guid: 4017609123750914db34b7c16a407ea1,
+    type: 3}
+  m_PrefabInstance: {fileID: 57538031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &341097356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341097352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fa4a804e7c76bb4a89c14d1106605c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &346390577
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +543,18 @@ Transform:
   m_Father: {fileID: 534563605}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499997664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503553178378502329, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534563604
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,8 +675,34 @@ PrefabInstance:
       propertyPath: barraElectricidad
       value: 
       objectReference: {fileID: 23358903}
+    - target: {fileID: 5831547958669272990, guid: 4152b85c748b44a429fed0a9e5fdb016,
+        type: 3}
+      propertyPath: barraAgua
+      value: 
+      objectReference: {fileID: 499997664}
+    - target: {fileID: 5831547958669272990, guid: 4152b85c748b44a429fed0a9e5fdb016,
+        type: 3}
+      propertyPath: barraComida
+      value: 
+      objectReference: {fileID: 1957160873}
+    - target: {fileID: 5831547958669272990, guid: 4152b85c748b44a429fed0a9e5fdb016,
+        type: 3}
+      propertyPath: vendasUI
+      value: 
+      objectReference: {fileID: 1419914049}
+    - target: {fileID: 5831547958669272990, guid: 4152b85c748b44a429fed0a9e5fdb016,
+        type: 3}
+      propertyPath: dineroUI
+      value: 
+      objectReference: {fileID: 1154567049}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4152b85c748b44a429fed0a9e5fdb016, type: 3}
+--- !u!1 &610172248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7905012639429777442, guid: 6df3705155fd4b0428c55f000c6a66ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1519261822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &630109635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -856,6 +1055,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 15.546
       objectReference: {fileID: 0}
+    - target: {fileID: 1503553177499764360, guid: 3837f413b177d224982bb92ff45c876a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503553177834878260, guid: 3837f413b177d224982bb92ff45c876a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503553177834878260, guid: 3837f413b177d224982bb92ff45c876a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503553177834878260, guid: 3837f413b177d224982bb92ff45c876a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1503553178722996661, guid: 3837f413b177d224982bb92ff45c876a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1044,7 +1263,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 752293294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1187497405}
+        m_MethodName: ApareceMenuAjustes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &752293294
@@ -1180,6 +1410,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760758179}
   m_CullTransparentMesh: 0
+--- !u!1001 &778682066
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2977565229899670810, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_Name
+      value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977565229899670808, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 416af9a7ab01e2a44978e8c980cf9cee, type: 3}
 --- !u!1 &795324503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1558,18 @@ Transform:
   m_Father: {fileID: 534563605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &807621868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2977565229899670811, guid: 416af9a7ab01e2a44978e8c980cf9cee,
+    type: 3}
+  m_PrefabInstance: {fileID: 778682066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599059f4b81ccb0479e0bdb24516594c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &820225820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1839,18 @@ Transform:
   m_Father: {fileID: 534563605}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1154567049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503553178438695746, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1187497404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,6 +1881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animMenuMenus: {fileID: 760758181}
+  animMenuAjustes: {fileID: 341097356}
 --- !u!4 &1187497406
 Transform:
   m_ObjectHideFlags: 0
@@ -1908,6 +2232,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1419914049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503553178811659967, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1484044083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2419,11 @@ PrefabInstance:
       propertyPath: scriptPJ
       value: 
       objectReference: {fileID: 8242776581667181167}
+    - target: {fileID: 7905012639429777443, guid: 6df3705155fd4b0428c55f000c6a66ad,
+        type: 3}
+      propertyPath: botonVendas
+      value: 
+      objectReference: {fileID: 129358886}
     - target: {fileID: 7905012639429777452, guid: 6df3705155fd4b0428c55f000c6a66ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2146,7 +2487,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1519261822}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 610172248}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdbf15be8f112404789a97e1a3fb93c9, type: 3}
@@ -2861,6 +3202,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1957160873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503553178467862096, guid: 3837f413b177d224982bb92ff45c876a,
+    type: 3}
+  m_PrefabInstance: {fileID: 630109635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2033817674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,629 +3506,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
         type: 3}
-      propertyPath: nombres.Array.size
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.size
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.size
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.size
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
       propertyPath: scriptEnlaceUI
       value: 
       objectReference: {fileID: 1519261823}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[0]
-      value: Jennifer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[0]
-      value: Lawrence
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[1]
-      value: Jay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[1]
-      value: Z
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[2]
-      value: Cristiano
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[2]
-      value: Ronaldo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[3]
-      value: Donald
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[3]
-      value: Trump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[4]
-      value: Angelina
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[4]
-      value: Jolie
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[5]
-      value: Segundo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[5]
-      value: De Chomon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[6]
-      value: John
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[6]
-      value: Nieve
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[7]
-      value: Britney
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[7]
-      value: Spears
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[8]
-      value: Lil
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[8]
-      value: Pump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[9]
-      value: Oprah
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[9]
-      value: Winfrey
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[10]
-      value: Robert
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[10]
-      value: Downey Jr
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[11]
-      value: Will
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[11]
-      value: Smith
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[12]
-      value: Bad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[12]
-      value: Bunny
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[13]
-      value: Charlie
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[13]
-      value: Sheen
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[14]
-      value: Penelope
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[14]
-      value: Cruz
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[15]
-      value: James
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[15]
-      value: Franco
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[16]
-      value: Francisco
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[16]
-      value: "Iba\xF1ez"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[17]
-      value: Bloom
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[17]
-      value: Orlando
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[18]
-      value: Ewan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[18]
-      value: McGregor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[19]
-      value: Hugh
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[19]
-      value: Jackman
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[20]
-      value: David
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[20]
-      value: Beckham
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[21]
-      value: Ashton
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[21]
-      value: Kutcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[22]
-      value: Lindsey
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[22]
-      value: Lohan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[23]
-      value: George
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[23]
-      value: Clooney
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[24]
-      value: Katy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[24]
-      value: Perry
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[25]
-      value: Emma
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[25]
-      value: Watson
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[26]
-      value: Becky
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[26]
-      value: G
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[27]
-      value: Scarlett
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[27]
-      value: Johansson
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[28]
-      value: DiCaprio
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[28]
-      value: Leonardo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: nombres.Array.data[29]
-      value: Kim
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: apellidos.Array.data[29]
-      value: Kardashian
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[0]
-      value: Jennifer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[1]
-      value: Jay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[2]
-      value: Cristiano
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[3]
-      value: Donald
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[4]
-      value: Angelina
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[5]
-      value: Segundo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[6]
-      value: Britney
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[7]
-      value: Lil
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[8]
-      value: Oprah
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[9]
-      value: Robert
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[10]
-      value: Will
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[11]
-      value: Bad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[12]
-      value: Charlie
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[13]
-      value: Penelope
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[14]
-      value: James
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[15]
-      value: Francisco
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[16]
-      value: Orlando
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[17]
-      value: Ewan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[18]
-      value: Hugh
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[19]
-      value: David
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[20]
-      value: Ashton
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[21]
-      value: Lindsay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[22]
-      value: George
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[23]
-      value: Katy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[24]
-      value: Emma
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[25]
-      value: Becky
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[26]
-      value: Scarlet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[27]
-      value: Leonardo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[28]
-      value: John
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaNombres.Array.data[29]
-      value: Kim
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[28]
-      value: Nieve
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[29]
-      value: Kardashian
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[0]
-      value: Lawrence
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[1]
-      value: Z
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[2]
-      value: Ronaldo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[3]
-      value: Trump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[4]
-      value: Jolie
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[5]
-      value: De Chomon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[6]
-      value: Spears
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[7]
-      value: Pump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[8]
-      value: Winfrey
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[9]
-      value: Downey Jr.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[10]
-      value: Smith
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[11]
-      value: Bunny
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[12]
-      value: Sheen
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[13]
-      value: Cruz
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[14]
-      value: Franco
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[15]
-      value: "Iba\xF1ez"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[16]
-      value: Bloom
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[17]
-      value: McGregor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[18]
-      value: Jackman
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[19]
-      value: Beckham
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[20]
-      value: Kutcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[21]
-      value: Lohan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[22]
-      value: Clooney
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[23]
-      value: Perry
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[24]
-      value: Watson
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[25]
-      value: G
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[26]
-      value: Johansson
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
-        type: 3}
-      propertyPath: listaApellidos.Array.data[27]
-      value: DiCaprio
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
 --- !u!114 &8242776581667181167 stripped
