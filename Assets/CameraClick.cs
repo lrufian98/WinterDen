@@ -15,7 +15,7 @@ public class CameraClick : MonoBehaviour
     void Update()
     {
         //transform.position = Vector3.Lerp(startMarker.positionInicial, endMarker.position.vector3, fracJourney);
-        transform.position = Vector3.Lerp(posicionInicial.position, Vector3.position, fracJourney);
+        //transform.position = Vector3.Lerp(posicionInicial.position, Vector3.position, fracJourney);
     }
 
     void OnMouseDown()
