@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2882168516072822066}
   - component: {fileID: 5621959598747696823}
   - component: {fileID: 1377085022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Personaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   suerte: 0
   expSu: 0
   expBase: 500
+  nivelTotal: 0
   listaNombres:
   - Jennifer
   - Jay
@@ -293,4 +294,6 @@ MonoBehaviour:
   barraV: {fileID: 0}
   barraE: {fileID: 0}
   barraS: {fileID: 0}
-  statsPJ: {fileID: 0}
+  nivel: {fileID: 0}
+  statsPJ: {fileID: 1339867871566993827}
+  nombreApellido: {fileID: 0}

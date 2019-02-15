@@ -6,8 +6,8 @@ using UnityEngine;
 public class EstadisticasPJ : MonoBehaviour
 {
 
-    public int vidaMaxConejo = 20;
-    public int vidaActualConejo;
+    public float vidaMaxConejo = 20;
+    public float vidaActualConejo;
     public bool regenerando = false;
     public bool enCombate = false;
 
@@ -80,7 +80,7 @@ public class EstadisticasPJ : MonoBehaviour
         {
             if (!regenerando)
             {
-                //StartCoroutine(RegenerarVida());
+                StartCoroutine(RegenerarVida());
             }
             
         }

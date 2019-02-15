@@ -28,6 +28,11 @@ public class AbrirInfoConejo : MonoBehaviour
 
     public EstadisticasPJ statsPJ;
 
+    public Image barraVida;
+
+    public Text nombreApellido;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +61,7 @@ public class AbrirInfoConejo : MonoBehaviour
 
     public void PasaInfo()
     {
+        nombreApellido.text = statsPJ.nombre + " " + statsPJ.apellido;
         barraA.fillAmount = statsPJ.aptitud / 10;
         barraC.fillAmount = statsPJ.carisma / 10;
         barraT.fillAmount = statsPJ.tecnica / 10;
@@ -64,7 +70,11 @@ public class AbrirInfoConejo : MonoBehaviour
         barraE.fillAmount = statsPJ.energia / 10;
         barraS.fillAmount = statsPJ.suerte / 10;
 
+        barraVida.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
+
         nivel.text = "NV " + statsPJ.nivelTotal;
+
+       
     }
 
 }
