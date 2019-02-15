@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 907127075}
   - component: {fileID: 907127074}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1701,7 +1701,7 @@ GameObject:
   - component: {fileID: 1108597995}
   - component: {fileID: 1108597994}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 1234443357}
   - component: {fileID: 1234443356}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2071,7 +2071,7 @@ GameObject:
   - component: {fileID: 1250955515}
   - component: {fileID: 1250955514}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2790,7 @@ GameObject:
   - component: {fileID: 1552500925}
   - component: {fileID: 1552500924}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3340,7 +3340,7 @@ GameObject:
   - component: {fileID: 1835819037}
   - component: {fileID: 1835819036}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3666,7 +3666,7 @@ GameObject:
   - component: {fileID: 1928497358}
   - component: {fileID: 1928497357}
   m_Layer: 5
-  m_Name: barraStatsFill
+  m_Name: barraStatsFillE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3943,6 +3943,41 @@ PrefabInstance:
       propertyPath: scriptEnlaceUI
       value: 
       objectReference: {fileID: 1519261823}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraA
+      value: 
+      objectReference: {fileID: 1250955514}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraC
+      value: 
+      objectReference: {fileID: 1108597994}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraT
+      value: 
+      objectReference: {fileID: 1552500924}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraI
+      value: 
+      objectReference: {fileID: 1234443356}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraV
+      value: 
+      objectReference: {fileID: 907127074}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraE
+      value: 
+      objectReference: {fileID: 1928497357}
+    - target: {fileID: 1339867871566993827, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: barraS
+      value: 
+      objectReference: {fileID: 1835819036}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
 --- !u!114 &8242776581667181167 stripped
