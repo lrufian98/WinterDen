@@ -12,6 +12,7 @@ TagManager:
   - HabitacionVeterinario
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
+  - Enemigo
   layers:
   - Default
   - TransparentFX
