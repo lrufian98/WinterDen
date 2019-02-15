@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 552480433327569678}
   - component: {fileID: 3687140054931618182}
   - component: {fileID: 1169523952}
+  - component: {fileID: 5429458748944501386}
   m_Layer: 0
   m_Name: Habitacion Agua
   m_TagString: HabitacionAgua
@@ -127,6 +128,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 20
+  zoom: 2
+--- !u!114 &5429458748944501386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583586910629149398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  zoom: 1
 --- !u!1 &4143331532033975693
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PantallaMenu.unity
     guid: 1a3ae586764318745bc6196fde827b31
+  - enabled: 1
+    path: Assets/Pruebas/LuisRufianCruz/Scenes/PantallaJuegoLuisRufian.unity
+    guid: e0908ed3775804e4dba02d3112b1aa77
   m_configObjects: {}

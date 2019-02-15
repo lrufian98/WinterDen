@@ -145,7 +145,7 @@ public class GeneradorDeRecursos : MonoBehaviour
                 yield return new WaitForSeconds(tiempoVendas);
                 if(ControladorDeRecursos.vendas < ControladorDeRecursos.capacidadVendas)
                 {
-                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas + statsPJ.inteligencia/2;
+                    ControladorDeRecursos.vendas = ControladorDeRecursos.vendas + cantidadVendasGeneradas + statsPJ.inteligencia;
                 }
             }
             else
