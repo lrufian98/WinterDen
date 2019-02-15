@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1339867871566993827}
   - component: {fileID: 2882168516072822066}
   - component: {fileID: 5621959598747696823}
+  - component: {fileID: 1377085022}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -272,3 +273,24 @@ MonoBehaviour:
   velocidadTope: 1
   habitacionActual: {fileID: 0}
   vectorVelocidad: {x: 1, y: 0}
+--- !u!114 &1377085022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608237233854280045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52ab84fb8afbe64fba889b0385c1251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animInfoConejo: {fileID: 0}
+  barraA: {fileID: 0}
+  barraC: {fileID: 0}
+  barraT: {fileID: 0}
+  barraI: {fileID: 0}
+  barraV: {fileID: 0}
+  barraE: {fileID: 0}
+  barraS: {fileID: 0}
+  statsPJ: {fileID: 0}
