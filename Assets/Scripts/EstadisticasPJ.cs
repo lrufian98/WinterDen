@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EstadisticasPJ : MonoBehaviour
 {
@@ -15,27 +16,40 @@ public class EstadisticasPJ : MonoBehaviour
 
     public int aptitud;
     public float expAp;
+    public Image barraA;
 
     public int carisma;
     public float expCar;
+    public Image barraC;
 
     public int tecnica;
     public float expTec;
+    public Image barraT;
 
     public int inteligencia;
     public float expInt;
+    public Image barraI;
 
     public int vida;
     public float expVid;
+    public Image barraV;
 
     public int energia;
     public float expEn;
+    public Image barraE;
 
     public int suerte;
     public float expSu;
+    public Image barraS;
+
 
     int nivelMaximo = 10;
     public int expBase = 500;
+
+    public List<string> listaNombres;
+    public List<string> listaApellidos;
+    public string nombre;
+    public string apellido;
 
 
     // Start is called before the first frame update
@@ -50,6 +64,9 @@ public class EstadisticasPJ : MonoBehaviour
         vida = Random.Range(1, 4);
         energia = Random.Range(1, 4);
         suerte = Random.Range(1, 4);
+
+        nombre = listaNombres[Random.Range(0, 29)];
+        apellido = listaApellidos[Random.Range(0, 29)];
 
 
     }
@@ -130,6 +147,8 @@ public class EstadisticasPJ : MonoBehaviour
     {
         scriptEnlaceUI.scriptPJ = miScript;
     }
+
+
 
 
 }
