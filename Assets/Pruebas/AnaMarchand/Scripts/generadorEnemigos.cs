@@ -22,7 +22,7 @@ public class generadorEnemigos : MonoBehaviour
         if (Time.time > siguienteEnemigo)
         {
             siguienteEnemigo = Time.time + frecuenciaGeneracion;
-            randX = Random.Range(-10f, 10f);
+            //randX = Random.Range(-10f, 10f);
             dondeGenerarEnemigos = new Vector2(randX, transform.position.y);
             Instantiate(enemigo, dondeGenerarEnemigos, Quaternion.identity);
         }
