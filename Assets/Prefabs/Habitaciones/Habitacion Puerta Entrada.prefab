@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 4174950574103300641}
   - component: {fileID: 6837320572330685790}
   - component: {fileID: 237677148837021905}
+  - component: {fileID: 1849029223}
   m_Layer: 0
   m_Name: Habitacion Puerta Entrada
   m_TagString: HabitacionPuertaEntrada
@@ -307,3 +308,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.058612585}
   m_EdgeRadius: 0
+--- !u!114 &1849029223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617181602593913352}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

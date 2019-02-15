@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CameraClick : MonoBehaviour, UnityEngine.EventSystems.IPointerClickHandler
+public class CamaraClick : MonoBehaviour, UnityEngine.EventSystems.IPointerClickHandler
 {
     public float duration = 20.0f;
     public float zoom = 2f;
