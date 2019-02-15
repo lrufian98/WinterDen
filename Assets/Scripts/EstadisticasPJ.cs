@@ -1,50 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class EstadisticasPJ : MonoBehaviour
 {
 
-    public int vidaMaxConejo = 20;
-    public int vidaActualConejo;
+    public float vidaMaxConejo = 20;
+    public float vidaActualConejo;
     public bool regenerando = false;
     public bool enCombate = false;
 
     public GestorBotonCuracion scriptEnlaceUI;
     public EstadisticasPJ miScript;
 
-    public int aptitud;
+    public float aptitud;
     public float expAp;
-    public Image barraA;
+    
 
-    public int carisma;
+    public float carisma;
     public float expCar;
-    public Image barraC;
 
-    public int tecnica;
+
+    public float tecnica;
     public float expTec;
-    public Image barraT;
 
-    public int inteligencia;
+
+    public float inteligencia;
     public float expInt;
-    public Image barraI;
 
-    public int vida;
+
+    public float vida;
     public float expVid;
-    public Image barraV;
 
-    public int energia;
+
+    public float energia;
     public float expEn;
-    public Image barraE;
 
-    public int suerte;
+
+    public float suerte;
     public float expSu;
-    public Image barraS;
+
 
 
     int nivelMaximo = 10;
     public int expBase = 500;
+
+    public float nivelTotal;
 
     public List<string> listaNombres;
     public List<string> listaApellidos;
@@ -78,7 +80,7 @@ public class EstadisticasPJ : MonoBehaviour
         {
             if (!regenerando)
             {
-                //StartCoroutine(RegenerarVida());
+                StartCoroutine(RegenerarVida());
             }
             
         }
@@ -107,6 +109,8 @@ public class EstadisticasPJ : MonoBehaviour
             expInt = 0;
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + inteligencia;
         }
+
+        nivelTotal = aptitud + carisma + tecnica + inteligencia + vida + energia + suerte;
 
     }
 
