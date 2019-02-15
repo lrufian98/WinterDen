@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EstadisticasPJ : MonoBehaviour
 {
@@ -15,24 +16,32 @@ public class EstadisticasPJ : MonoBehaviour
 
     public int aptitud;
     public float expAp;
+    public Image barraA;
 
     public int carisma;
     public float expCar;
+    public Image barraC;
 
     public int tecnica;
     public float expTec;
+    public Image barraT;
 
     public int inteligencia;
     public float expInt;
+    public Image barraI;
 
     public int vida;
     public float expVid;
+    public Image barraV;
 
     public int energia;
     public float expEn;
+    public Image barraE;
 
     public int suerte;
     public float expSu;
+    public Image barraS;
+
 
     int nivelMaximo = 10;
     public int expBase = 500;
