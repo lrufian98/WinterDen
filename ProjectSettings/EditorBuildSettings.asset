@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PantallaAjustes.unity
     guid: 864120864df02204d93e3594c04778df
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PantallaMenu.unity
     guid: 1a3ae586764318745bc6196fde827b31
   m_configObjects: {}

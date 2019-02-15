@@ -23,7 +23,7 @@ public class generadorEnemigos : MonoBehaviour
         {
             siguienteEnemigo = Time.time + frecuenciaGeneracion;
             //randX = Random.Range(-10f, 10f);
-            dondeGenerarEnemigos = new Vector2(randX, transform.position.y);
+            dondeGenerarEnemigos = new Vector2(transform.position.x, transform.position.y);
             Instantiate(enemigo, dondeGenerarEnemigos, Quaternion.identity);
         }
     }
