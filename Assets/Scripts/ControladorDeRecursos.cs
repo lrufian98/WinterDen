@@ -14,16 +14,16 @@ public class ControladorDeRecursos : MonoBehaviour
     public static float agua;
     public static float capacidadAgua = 100;
 
-    public static int vendas;
-    public static int capacidadVendas = 10;
+    public static float vendas;
+    public static float capacidadVendas = 10;
 
-    public static int dinero;
+    public static float dinero;
 
     public Image barraElectricidad;
     public Image barraComida;
     public Image barraAgua;
 
-
+    
 
     public Text vendasUI;
     public Text dineroUI;
