@@ -9,6 +9,9 @@ public class AbrirInfoConejo : MonoBehaviour
     
     public Animator animInfoConejo;
     bool activaInfoConejo = false;
+    public Animator vidaEncima;
+
+    public Image BVE;
 
     public Image barraA;
 
@@ -28,6 +31,10 @@ public class AbrirInfoConejo : MonoBehaviour
 
     public EstadisticasPJ statsPJ;
 
+    public Text nombreConejo;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,13 +45,17 @@ public class AbrirInfoConejo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
     }
 
     public void OnMouseDown()
     {
         AbreMenuInfo();
+        BarraVidaSuperior();
         PasaInfo();
+        
+
+
     }
 
 
@@ -63,8 +74,20 @@ public class AbrirInfoConejo : MonoBehaviour
         barraV.fillAmount = statsPJ.vida / 10;
         barraE.fillAmount = statsPJ.energia / 10;
         barraS.fillAmount = statsPJ.suerte / 10;
-
+        BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
         nivel.text = "NV " + statsPJ.nivelTotal;
+        nombreConejo.text = statsPJ.nombre + " " + statsPJ.apellido;
+    }
+    public void BarraVidaSuperior()
+    {
+        if (vidaEncima.GetBool("SalirBarraVida") == true)
+        {
+            vidaEncima.SetBool("SalirBarraVida", false);
+        }
+        else
+        {
+            vidaEncima.SetBool("SalirBarraVida", true);
+        }
     }
 
 }
