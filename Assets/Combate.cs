@@ -18,7 +18,7 @@ public class Combate : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {
-            if (Input.GetKey(key))
+            
         }
         
     }

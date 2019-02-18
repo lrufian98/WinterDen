@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7053487344667601048}
   - component: {fileID: 99076779087422758}
   - component: {fileID: 5174317468622899931}
-  - component: {fileID: 504058557}
   - component: {fileID: 5418341528734206455}
   m_Layer: 0
   m_Name: Habitacion Electricidad
@@ -116,20 +115,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.058612585}
   m_EdgeRadius: 0
---- !u!114 &504058557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446881530853989663}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 20
-  zoom: 2
 --- !u!114 &5418341528734206455
 MonoBehaviour:
   m_ObjectHideFlags: 0
