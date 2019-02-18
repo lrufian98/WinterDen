@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6652185515301174957}
   - component: {fileID: 552480433327569678}
   - component: {fileID: 3687140054931618182}
-  - component: {fileID: 1169523952}
   - component: {fileID: 5429458748944501386}
   m_Layer: 0
   m_Name: Habitacion Agua
@@ -116,20 +115,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.058612585}
   m_EdgeRadius: 0
---- !u!114 &1169523952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583586910629149398}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 20
-  zoom: 2
 --- !u!114 &5429458748944501386
 MonoBehaviour:
   m_ObjectHideFlags: 0
