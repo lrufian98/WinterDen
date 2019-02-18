@@ -69,7 +69,6 @@ GameObject:
   - component: {fileID: 5807074774309351722}
   - component: {fileID: 3879579495206594080}
   - component: {fileID: 2243045089061755184}
-  - component: {fileID: 1211913084}
   - component: {fileID: 5411778892965156455}
   m_Layer: 0
   m_Name: Habitacion Veterinario
@@ -173,20 +172,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.058612585}
   m_EdgeRadius: 0
---- !u!114 &1211913084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396605993260390146}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc465496473649842a929c2dd7fac2a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 20
-  zoom: 2
 --- !u!114 &5411778892965156455
 MonoBehaviour:
   m_ObjectHideFlags: 0
