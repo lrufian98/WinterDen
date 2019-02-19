@@ -716,7 +716,7 @@ MonoBehaviour:
   zorro1: {fileID: 6350375002075598447, guid: 0733bb54d1508674a850ba45980ab277, type: 3}
   zorro2: {fileID: 2896224366139001194, guid: ba3d003b125b07e4cbb0aae378d08ee7, type: 3}
   zorro3: {fileID: 7678844739037561273, guid: d7041c45fc042df408adb3af2e5d6b46, type: 3}
-  maxTime: 5
+  maxTime: 10
   minTime: 2
 --- !u!4 &1519799552
 Transform:
