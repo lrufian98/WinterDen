@@ -10,6 +10,7 @@ public class AbrirInfoConejo : MonoBehaviour
     public Animator animInfoConejo;
     bool activaInfoConejo = false;
     public Animator vidaEncima;
+    public static bool cerrarEstadisticas = false;
 
     public Image BVE;
 
@@ -46,12 +47,17 @@ public class AbrirInfoConejo : MonoBehaviour
     void Update()
     {
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
+        if(cerrarEstadisticas)
+        {
+            vidaEncima.SetBool("SalirBarraVida", false);
+        }
     }
 
     public void OnMouseDown()
     {
+        cerrarEstadisticas = true;
         AbreMenuInfo();
-        BarraVidaSuperior();
+        Invoke("BarraVidaSuperior", 0.2f);
         PasaInfo();
         
 
@@ -62,6 +68,12 @@ public class AbrirInfoConejo : MonoBehaviour
     public void AbreMenuInfo()
     {
         activaInfoConejo = !activaInfoConejo;
+        animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
+    }
+
+    public void cierraMenuInfo()
+    {
+        activaInfoConejo = false;
         animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
     }
 
@@ -80,13 +92,17 @@ public class AbrirInfoConejo : MonoBehaviour
     }
     public void BarraVidaSuperior()
     {
+        cerrarEstadisticas = false;
         if (vidaEncima.GetBool("SalirBarraVida") == true)
         {
             vidaEncima.SetBool("SalirBarraVida", false);
         }
         else
         {
-            vidaEncima.SetBool("SalirBarraVida", true);
+            if (activaInfoConejo)
+            {
+                vidaEncima.SetBool("SalirBarraVida", true);
+            }
         }
     }
 
