@@ -70,7 +70,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         {
             velocidad = velocidad *-1;
             spritePJ.flipX = !spritePJ.flipX;
-            Invoke("EscribirEnCuaderno", 1f);
+            Invoke("EscribirEnCuaderno", Random.Range(1f,2f));
         }
     }
 
