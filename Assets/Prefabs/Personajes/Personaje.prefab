@@ -556,8 +556,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animInfoConejo: {fileID: 0}
-  vidaEncima: {fileID: 682407539}
-  BVE: {fileID: 314402951}
+  vidaEncima: {fileID: 0}
+  BVE: {fileID: 0}
   barraA: {fileID: 0}
   barraC: {fileID: 0}
   barraT: {fileID: 0}

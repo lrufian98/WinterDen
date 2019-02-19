@@ -5012,10 +5012,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 630109641}
     - target: {fileID: 1377085022, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
-      propertyPath: statsPJ
-      value: 
-      objectReference: {fileID: 8242776581667181167}
-    - target: {fileID: 1377085022, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
       propertyPath: nivel
       value: 
       objectReference: {fileID: 208213014}
