@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 1397752131422336604, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}
       propertyPath: m_Name
-      value: FoxRojoCorrer
+      value: FoxRojoCorrer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1397752131422336604, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}
@@ -71,6 +71,16 @@ PrefabInstance:
     - target: {fileID: 1397752131422336604, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
+        type: 3}
+      propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8999827637193560300, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
@@ -142,11 +152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.21516907
-      objectReference: {fileID: 0}
-    - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60b1b6c64f2d9bb49874f4d3a509a962, type: 3}

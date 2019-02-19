@@ -9,9 +9,9 @@ public class movimientoBebeConejo : MonoBehaviour
     public float velocidadTope;
     public Transform habitacionActual;
     bool fueraDeHabitacion;
-    SpriteRenderer spritePJ;
+    //SpriteRenderer spritePJ;
 
-    Animator animPJ;
+    //Animator animPJ;
 
 
     public Vector2 vectorVelocidad;
@@ -22,7 +22,7 @@ public class movimientoBebeConejo : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //spritePJ = GetComponent<SpriteRenderer>();
-        animPJ = GetComponent<Animator>();
+        //animPJ = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,22 +49,12 @@ public class movimientoBebeConejo : MonoBehaviour
         }
     }
 
-
-
-
-    //void EscribirEnCuaderno()
-    //{
-    //    animPJ.SetBool("Escribir", true);
-    //}
-
-
-
     private void OnCollisionEnter2D(Collision2D col)
     {
        if (col.gameObject.CompareTag("Pared"))
        {
             velocidad = velocidad * -1;
-            spritePJ.flipX = !spritePJ.flipX;
+            //spritePJ.flipX = !spritePJ.flipX;
             //Invoke("EscribirEnCuaderno", 1f);
         }
     }
