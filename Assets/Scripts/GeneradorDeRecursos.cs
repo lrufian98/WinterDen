@@ -18,6 +18,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     public int cantidadVendasGeneradas;
 
     public EstadisticasPJ statsPJ;
+
     public float tiempoExp;
     
     
