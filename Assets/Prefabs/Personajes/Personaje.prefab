@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 314402950}
   - component: {fileID: 314402952}
   - component: {fileID: 314402951}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: llena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 682407541}
   - component: {fileID: 682407540}
   - component: {fileID: 682407539}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: CanvasBarraVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1486044874}
   - component: {fileID: 1486044876}
   - component: {fileID: 1486044875}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: vacia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,9 +285,9 @@ GameObject:
   - component: {fileID: 2882168516072822066}
   - component: {fileID: 5621959598747696823}
   - component: {fileID: 1377085022}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Personaje
-  m_TagString: Untagged
+  m_TagString: Conejos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +427,6 @@ MonoBehaviour:
   vidaActualConejo: 5
   regenerando: 0
   enCombate: 0
-  scriptEnlaceUI: {fileID: 0}
   miScript: {fileID: 1339867871566993827}
   aptitud: 0
   expAp: 0
@@ -555,16 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52ab84fb8afbe64fba889b0385c1251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animInfoConejo: {fileID: 0}
   vidaEncima: {fileID: 682407539}
   BVE: {fileID: 314402951}
-  barraA: {fileID: 0}
-  barraC: {fileID: 0}
-  barraT: {fileID: 0}
-  barraI: {fileID: 0}
-  barraV: {fileID: 0}
-  barraE: {fileID: 0}
-  barraS: {fileID: 0}
-  nivel: {fileID: 0}
   statsPJ: {fileID: 1339867871566993827}
-  nombreConejo: {fileID: 0}

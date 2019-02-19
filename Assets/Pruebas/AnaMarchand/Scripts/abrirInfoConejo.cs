@@ -7,33 +7,49 @@ using UnityEngine.UI;
 public class AbrirInfoConejo : MonoBehaviour
 {
     
-    public Animator animInfoConejo;
+    Animator animInfoConejo;
     bool activaInfoConejo = false;
     public Animator vidaEncima;
+    public static bool cerrarEstadisticas = false;
 
     public Image BVE;
 
-    public Image barraA;
+    Image barraA;
 
-    public Image barraC;
+    Image barraC;
 
-    public Image barraT;
+    Image barraT;
 
-    public Image barraI;
+    Image barraI;
 
-    public Image barraV;
+    Image barraV;
 
-    public Image barraE;
+    Image barraE;
 
-    public Image barraS;
+    Image barraS;
 
-    public Text nivel;
+    Text nivel;
 
     public EstadisticasPJ statsPJ;
 
-    public Text nombreConejo;
+    Text nombreConejo;
+
+    private void Awake()
+    {
+        barraA = GameObject.Find("barraStatsFill A").GetComponent<Image>();
+        barraC = GameObject.Find("barraStatsFill C").GetComponent<Image>();
+        barraT = GameObject.Find("barraStatsFill T").GetComponent<Image>();
+        barraI = GameObject.Find("barraStatsFill I").GetComponent<Image>();
+        barraV = GameObject.Find("barraStatsFill V").GetComponent<Image>();
+        barraE = GameObject.Find("barraStatsFill E").GetComponent<Image>();
+        barraS = GameObject.Find("barraStatsFill S").GetComponent<Image>();
+
+        nivel = GameObject.Find("nivel").GetComponent<Text>();
+        nombreConejo = GameObject.Find("nombreConejo").GetComponent<Text>();
 
 
+        animInfoConejo = GameObject.Find("fondoMenuConejo").GetComponent<Animator>();
+    }
 
 
     // Start is called before the first frame update
@@ -46,12 +62,17 @@ public class AbrirInfoConejo : MonoBehaviour
     void Update()
     {
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
+        if(cerrarEstadisticas)
+        {
+            vidaEncima.SetBool("SalirBarraVida", false);
+        }
     }
 
     public void OnMouseDown()
     {
+        cerrarEstadisticas = true;
         AbreMenuInfo();
-        BarraVidaSuperior();
+        Invoke("BarraVidaSuperior", 0.2f);
         PasaInfo();
         
 
@@ -62,6 +83,12 @@ public class AbrirInfoConejo : MonoBehaviour
     public void AbreMenuInfo()
     {
         activaInfoConejo = !activaInfoConejo;
+        animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
+    }
+
+    public void cierraMenuInfo()
+    {
+        activaInfoConejo = false;
         animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
     }
 
@@ -80,13 +107,17 @@ public class AbrirInfoConejo : MonoBehaviour
     }
     public void BarraVidaSuperior()
     {
+        cerrarEstadisticas = false;
         if (vidaEncima.GetBool("SalirBarraVida") == true)
         {
             vidaEncima.SetBool("SalirBarraVida", false);
         }
         else
         {
-            vidaEncima.SetBool("SalirBarraVida", true);
+            if (activaInfoConejo)
+            {
+                vidaEncima.SetBool("SalirBarraVida", true);
+            }
         }
     }
 

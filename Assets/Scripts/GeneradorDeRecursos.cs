@@ -18,7 +18,9 @@ public class GeneradorDeRecursos : MonoBehaviour
     public int cantidadVendasGeneradas;
 
     public EstadisticasPJ statsPJ;
+
     public float tiempoExp;
+    
     
 
     // Start is called before the first frame update

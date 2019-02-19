@@ -42,7 +42,12 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Habitacion"))
+        if (col.gameObject.CompareTag("HabitacionElectricidad")||
+            col.gameObject.CompareTag("HabitacionComida")||
+            col.gameObject.CompareTag("HabitacionAgua")||
+            col.gameObject.CompareTag("HabitacionVeterinario")||
+            col.gameObject.CompareTag("HabitacionDormitorio")||
+            col.gameObject.CompareTag("HabitacionPuertaEntrada"))
         {
             fueraDeHabitacion = true;
             rb.velocity = new Vector2(0,0);
@@ -65,7 +70,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         {
             velocidad = velocidad *-1;
             spritePJ.flipX = !spritePJ.flipX;
-            Invoke("EscribirEnCuaderno", 1f);
+            Invoke("EscribirEnCuaderno", Random.Range(1f,2f));
         }
     }
 

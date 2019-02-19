@@ -12,6 +12,7 @@ TagManager:
   - HabitacionVeterinario
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
+  - Conejos
   layers:
   - Default
   - TransparentFX
@@ -21,11 +22,11 @@ TagManager:
   - UI
   - 
   - 
+  - Muro
+  - Enemigos
   - Conejos
-  - Muros
-  - BebesConejo
-  - Zorros
-  - Gusanos
+  - 
+  - 
   - 
   - 
   - 
