@@ -20,6 +20,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     public EstadisticasPJ statsPJ;
     public float tiempoExp;
     
+    
 
     // Start is called before the first frame update
     void Start()
