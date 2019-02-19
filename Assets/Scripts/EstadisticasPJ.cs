@@ -11,7 +11,7 @@ public class EstadisticasPJ : MonoBehaviour
     public bool regenerando = false;
     public bool enCombate = false;
 
-    public GestorBotonCuracion scriptEnlaceUI;
+    GestorBotonCuracion scriptEnlaceUI;
     public EstadisticasPJ miScript;
 
     public float aptitud;
@@ -53,8 +53,12 @@ public class EstadisticasPJ : MonoBehaviour
     public string nombre;
     public string apellido;
 
+    private void Awake()
+    {
+        scriptEnlaceUI=GameObject.Find("ControladorDeBotonVendas").GetComponent<GestorBotonCuracion>();
 
-    // Start is called before the first frame update
+    }
+
     void Start()
     {
         vidaActualConejo = vidaMaxConejo;
