@@ -29,6 +29,14 @@ public class ControladorDeRecursos : MonoBehaviour
     public Text dineroUI;
 
 
+    public Text numeroConejos;
+
+
+    private void Awake()
+    {
+        numeroConejos = GameObject.Find("numeroConejos").GetComponent<Text>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +64,8 @@ public class ControladorDeRecursos : MonoBehaviour
         barraAgua.fillAmount = agua / capacidadAgua;
         Debug.Log("elect" + electricidad + " cap" + capacidadElectricidad);
         Debug.Log(electricidad / capacidadElectricidad);
+
+        numeroConejos.text =GameObject.FindGameObjectsWithTag("Conejos").Length.ToString();
     }
 
     public void DineroExpedicion()

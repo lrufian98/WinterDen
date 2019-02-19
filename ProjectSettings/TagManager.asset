@@ -12,6 +12,7 @@ TagManager:
   - HabitacionVeterinario
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
+  - Conejos
   layers:
   - Default
   - TransparentFX

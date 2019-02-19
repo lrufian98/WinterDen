@@ -5138,6 +5138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje
       objectReference: {fileID: 0}
+    - target: {fileID: 6608237233854280045, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Conejos
+      objectReference: {fileID: 0}
     - target: {fileID: 39340867707236192, guid: ae3305cc6a88af549b2fcf75064439ce,
         type: 3}
       propertyPath: m_LocalPosition.x
