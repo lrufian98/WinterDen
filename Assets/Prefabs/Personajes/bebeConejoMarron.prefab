@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8871989312719815497}
   - component: {fileID: 8871989312719815498}
-  - component: {fileID: 8871989312719815499}
   - component: {fileID: 8871989312719815503}
-  - component: {fileID: 8871989312719815496}
-  m_Layer: 0
+  - component: {fileID: 745311403}
+  - component: {fileID: 745311405}
+  m_Layer: 11
   m_Name: bebeConejoMarron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 150
+  m_SortingOrder: 152
   m_Sprite: {fileID: 21300000, guid: 41fc855e46867df459c7606058bcd83d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.25, y: 4.25}
@@ -82,25 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &8871989312719815499
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8871989312719815492}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31cac7b769ae1c34da1b3765965e5edc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &8871989312719815503
 Rigidbody2D:
   serializedVersion: 4
@@ -122,8 +103,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &8871989312719815496
-PolygonCollider2D:
+--- !u!58 &745311403
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,69 +116,22 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.25, y: 4.25}
-    newSize: {x: 4.25, y: 4.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.545, y: -1.2149999}
-      - {x: 0.755, y: -0.98499995}
-      - {x: 0.865, y: -0.825}
-      - {x: 1.005, y: -0.545}
-      - {x: 1.055, y: -0.39499998}
-      - {x: 1.115, y: -0.105}
-      - {x: 1.115, y: 0.015}
-      - {x: 1.1949999, y: -0.044999998}
-      - {x: 1.275, y: -0.044999998}
-      - {x: 1.345, y: -0.015}
-      - {x: 1.415, y: 0.065}
-      - {x: 1.4549999, y: 0.145}
-      - {x: 1.4549999, y: 0.315}
-      - {x: 1.4449999, y: 0.345}
-      - {x: 1.405, y: 0.48499998}
-      - {x: 1.345, y: 0.60499996}
-      - {x: 1.055, y: 1.005}
-      - {x: 0.91499996, y: 1.125}
-      - {x: 0.72499996, y: 1.225}
-      - {x: 0.575, y: 1.295}
-      - {x: 0.42499998, y: 1.385}
-      - {x: 0.255, y: 1.4449999}
-      - {x: 0.085, y: 1.4649999}
-      - {x: -0.065, y: 1.475}
-      - {x: -0.195, y: 1.475}
-      - {x: -0.325, y: 1.4549999}
-      - {x: -0.405, y: 1.435}
-      - {x: -0.575, y: 1.365}
-      - {x: -0.66499996, y: 1.305}
-      - {x: -0.745, y: 1.235}
-      - {x: -0.875, y: 1.135}
-      - {x: -1.045, y: 0.955}
-      - {x: -1.115, y: 0.875}
-      - {x: -1.245, y: 0.655}
-      - {x: -1.355, y: 0.42499998}
-      - {x: -1.425, y: 0.265}
-      - {x: -1.4549999, y: 0.125}
-      - {x: -1.4549999, y: -0.114999995}
-      - {x: -1.415, y: -0.21499999}
-      - {x: -1.4449999, y: -0.275}
-      - {x: -1.4549999, y: -0.36499998}
-      - {x: -1.4549999, y: -0.625}
-      - {x: -1.415, y: -0.835}
-      - {x: -1.365, y: -0.945}
-      - {x: -1.3249999, y: -1.015}
-      - {x: -1.165, y: -1.155}
-      - {x: -1.035, y: -1.245}
-      - {x: -0.85499996, y: -1.3349999}
-      - {x: -0.705, y: -1.405}
-      - {x: -0.475, y: -1.4649999}
-      - {x: -0.005, y: -1.4649999}
-      - {x: 0.074999996, y: -1.4449999}
-      - {x: 0.225, y: -1.395}
-      - {x: 0.39499998, y: -1.3149999}
+  m_Offset: {x: 0.059505824, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.455561
+--- !u!114 &745311405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871989312719815492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01166b6c21f16b24dae4bd679a973908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 2
+  velocidadTope: 1
+  habitacionActual: {fileID: 0}
+  vectorVelocidad: {x: 1, y: 0}
