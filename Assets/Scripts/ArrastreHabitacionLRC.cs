@@ -8,6 +8,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     public float velocidad;
     public float velocidadTope;
     public Transform habitacionActual;
+    public ConejosEnSala scriptSalas;
     bool fueraDeHabitacion;
     SpriteRenderer spritePJ;
 
@@ -34,8 +35,12 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             {
                 rb.AddForce(vectorVelocidad * velocidad);
             }
-            habitacionActual = col.transform;
-            fueraDeHabitacion = false;
+            scriptSalas = col.GetComponent<ConejosEnSala>();
+            if (scriptSalas.conejosDentro.Count < 3)
+            {
+                habitacionActual = col.transform;
+                fueraDeHabitacion = false;
+            }
         }
     }
 

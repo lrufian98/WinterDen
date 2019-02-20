@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 6837320572330685790}
   - component: {fileID: 237677148837021905}
   - component: {fileID: 1830361987921178848}
+  - component: {fileID: 6905904301483918438}
   m_Layer: 0
   m_Name: Habitacion Puerta Entrada
   m_TagString: HabitacionPuertaEntrada
@@ -322,3 +323,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   zoom: 1
+--- !u!114 &6905904301483918438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617181602593913352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ab307e1c82eda4289ff6772fae0ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conejosDentro: []
+  salaLlena: 0
