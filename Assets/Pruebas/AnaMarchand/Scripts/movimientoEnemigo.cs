@@ -28,5 +28,14 @@ public class movimientoEnemigo : MonoBehaviour
 
         float fixedSpeed = velocidad * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+
+        if (posicionInicial.x < player.transform.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }
