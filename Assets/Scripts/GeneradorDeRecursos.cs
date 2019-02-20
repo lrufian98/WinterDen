@@ -26,7 +26,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(GastoRecursos());
     }
 
     // Update is called once per frame
@@ -188,5 +188,23 @@ public class GeneradorDeRecursos : MonoBehaviour
                 produciendo = false;
             }
         }
+    }
+    IEnumerator GastoRecursos()
+    {
+        yield return new WaitForSeconds(30f);
+        Debug.Log("Bajando Recursos");
+        if (ControladorDeRecursos.comida < 0)
+        {
+            ControladorDeRecursos.comida--;
+            
+
+        }
+        if (ControladorDeRecursos.agua < 0)
+        {
+            ControladorDeRecursos.agua--;
+        }
+
+
+
     }
 }

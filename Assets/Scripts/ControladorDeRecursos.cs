@@ -62,8 +62,7 @@ public class ControladorDeRecursos : MonoBehaviour
         barraElectricidad.fillAmount =  electricidad/capacidadElectricidad;
         barraComida.fillAmount = comida / capacidadComida;
         barraAgua.fillAmount = agua / capacidadAgua;
-        Debug.Log("elect" + electricidad + " cap" + capacidadElectricidad);
-        Debug.Log(electricidad / capacidadElectricidad);
+        
 
         numeroConejos.text =GameObject.FindGameObjectsWithTag("Conejos").Length.ToString();
     }
