@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 2404633132920629049}
   - component: {fileID: 6779200070368456307}
   - component: {fileID: 7796614614843502432}
+  - component: {fileID: 958108314253302820}
   m_Layer: 0
   m_Name: Habitacion Dormitorio
   m_TagString: HabitacionDormitorio
@@ -265,6 +266,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   zoom: 1
+--- !u!114 &958108314253302820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3849782359915568148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ab307e1c82eda4289ff6772fae0ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conejosDentro: []
+  salaLlena: 0
 --- !u!1 &7105449791798322494
 GameObject:
   m_ObjectHideFlags: 0
