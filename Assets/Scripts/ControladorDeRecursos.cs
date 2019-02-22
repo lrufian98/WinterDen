@@ -78,5 +78,7 @@ public class ControladorDeRecursos : MonoBehaviour
         dinero = dinero + Random.Range(150,200);
     }
 
+    
+
 
 }
