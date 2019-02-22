@@ -72,7 +72,11 @@ public class EstadisticasPJ : MonoBehaviour
         suerte = Random.Range(1, 4);
 
         nombre = listaNombres[Random.Range(0, 29)];
-        apellido = listaApellidos[Random.Range(0, 29)];
+        if (apellido == null)
+        {
+            apellido = listaApellidos[Random.Range(0, 29)];
+
+        }
 
 
     }

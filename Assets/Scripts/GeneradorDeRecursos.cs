@@ -191,19 +191,23 @@ public class GeneradorDeRecursos : MonoBehaviour
     }
     IEnumerator GastoRecursos()
     {
-        yield return new WaitForSeconds(30f);
-        Debug.Log("Bajando Recursos");
-        if (ControladorDeRecursos.comida < 0)
+        while (true)
         {
-            ControladorDeRecursos.comida--;
-            
+            Debug.Log("Bajando Recursos");
+            if (ControladorDeRecursos.comida > 0)
+            {
+                ControladorDeRecursos.comida--;
 
-        }
-        if (ControladorDeRecursos.agua < 0)
-        {
-            ControladorDeRecursos.agua--;
-        }
 
+            }
+            if (ControladorDeRecursos.agua > 0)
+            {
+                ControladorDeRecursos.agua--;
+            }
+
+            yield return new WaitForSeconds(30f);
+        }
+        
 
 
     }
