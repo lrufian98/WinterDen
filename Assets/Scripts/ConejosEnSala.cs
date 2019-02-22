@@ -6,6 +6,7 @@ public class ConejosEnSala : MonoBehaviour
 {
 
     public List<GameObject> conejosDentro;
+    public List<string> apellidosDentro;
 
     //public bool salaLlena = false;
 
@@ -23,31 +24,19 @@ public class ConejosEnSala : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //if (!salaLlena)
-        //{
-            if (col.CompareTag("Conejos"))
-            {
-                conejosDentro.Add(col.gameObject);
-               // if(conejosDentro.Count == 2)
-               // {
-                 //   salaLlena = true;
-               // }
-            }
-        //}
-        
+        if (col.CompareTag("Conejos")) 
+        {
+            conejosDentro.Add(col.gameObject);
+            apellidosDentro.Add(col.gameObject.GetComponent<EstadisticasPJ>().apellido);               
+        }  
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.CompareTag("Conejos"))
-        {
-
-            //if (conejosDentro.Count <= 2 && conejosDentro.Contains(col.gameObject))
-            //{
-                conejosDentro.Remove(col.gameObject);
-               // salaLlena = false;
-           // }
-            
+        {            
+            conejosDentro.Remove(col.gameObject);
+            apellidosDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().apellido);
         }
     }
 }

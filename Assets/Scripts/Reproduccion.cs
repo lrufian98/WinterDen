@@ -11,6 +11,7 @@ public class Reproduccion : MonoBehaviour
 
     public GameObject gazaposPrefab;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,8 @@ public class Reproduccion : MonoBehaviour
     IEnumerator NaceCrias()
     {
         yield return new WaitForSeconds(tiempoNacimiento);
-        Instantiate(gazaposPrefab, transform.position, new Quaternion(0, 0, 0, transform.rotation.w));
+        GameObject conejitoNuevo =  Instantiate(gazaposPrefab, transform.position, new Quaternion(0, 0, 0, transform.rotation.w));
+
         Debug.Log("Cagando Crias");
     }
 
