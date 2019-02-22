@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8281598655792071831}
   - component: {fileID: 397603642}
   - component: {fileID: 397603640}
+  - component: {fileID: 1518689174}
   m_Layer: 11
-  m_Name: bebeConejoGris
+  m_Name: BebeConejoGris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,3 +136,18 @@ MonoBehaviour:
   velocidadTope: 1
   habitacionActual: {fileID: 0}
   vectorVelocidad: {x: 1, y: 0}
+--- !u!114 &1518689174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281598655792071834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da131ebe368a4d6478018e7b613f5ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conejoGrandePrefab: {fileID: 6608237233854280045, guid: ae3305cc6a88af549b2fcf75064439ce,
+    type: 3}
+  apellidoElegido: 

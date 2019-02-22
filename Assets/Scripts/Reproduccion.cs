@@ -27,7 +27,7 @@ public class Reproduccion : MonoBehaviour
     {
         yield return new WaitForSeconds(tiempoNacimiento);
         GameObject conejitoNuevo =  Instantiate(gazaposPrefab, transform.position, new Quaternion(0, 0, 0, transform.rotation.w));
-
+        conejitoNuevo.GetComponent<CrecimientoBebe>().apellidoElegido = scriptSalas.apellidosDentro[Random.Range(0, 1)];
         Debug.Log("Cagando Crias");
     }
 

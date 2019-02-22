@@ -541,6 +541,7 @@ MonoBehaviour:
   velocidad: 10
   velocidadTope: 1
   habitacionActual: {fileID: 0}
+  scriptSalas: {fileID: 0}
   vectorVelocidad: {x: 1, y: 0}
 --- !u!114 &1377085022
 MonoBehaviour:
