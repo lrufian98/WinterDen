@@ -6,6 +6,8 @@ using UnityEngine;
 public class EstadisticasPJ : MonoBehaviour
 {
 
+    public float tiempoGastoRecursos = 5f;
+
     public float vidaMaxConejo = 20;
     public float vidaActualConejo;
     public bool regenerando = false;
@@ -61,6 +63,8 @@ public class EstadisticasPJ : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(GastoComida());
+        StartCoroutine(GastoAgua());
         vidaActualConejo = vidaMaxConejo;
 
         aptitud = Random.Range(1, 4);
@@ -160,7 +164,39 @@ public class EstadisticasPJ : MonoBehaviour
         scriptEnlaceUI.scriptPJ = miScript;
     }
 
+    IEnumerator GastoAgua()
+    {
+        while (true)
+        {
+            Debug.Log("A beber");
+            if (ControladorDeRecursos.agua > 0)
+            {
+                ControladorDeRecursos.agua--;
+                Debug.Log("Bajando Agua");
+            }
 
+            yield return new WaitForSeconds(tiempoGastoRecursos);
+        }
+
+
+
+    }
+    IEnumerator GastoComida()
+    {
+        while (true)
+        {
+
+            Debug.Log("A comer");
+            if (ControladorDeRecursos.comida > 0)
+            {
+                ControladorDeRecursos.comida--;
+                Debug.Log("Bajando Comida");
+            }
+            yield return new WaitForSeconds(tiempoGastoRecursos);
+        }
+
+
+    }
 
 
 }

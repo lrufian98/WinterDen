@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConejosEnSala : MonoBehaviour
 {
+    public float tiempoGastoElectricidad = 5;
 
     public List<GameObject> conejosDentro;
     public List<string> apellidosDentro;
@@ -13,7 +14,7 @@ public class ConejosEnSala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(GastoElectricidad());
     }
 
     // Update is called once per frame
@@ -39,4 +40,21 @@ public class ConejosEnSala : MonoBehaviour
             apellidosDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().apellido);
         }
     }
+    IEnumerator GastoElectricidad()
+    {
+        while (true)
+        {
+            Debug.Log("GastoElectricidad");
+            if (ControladorDeRecursos.electricidad > 0)
+            {
+                ControladorDeRecursos.electricidad--;
+            }
+
+            yield return new WaitForSeconds(tiempoGastoElectricidad);
+        }
+
+
+
+    }
+
 }

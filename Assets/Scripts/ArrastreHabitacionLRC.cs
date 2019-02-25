@@ -29,18 +29,28 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("HabitacionElectricidad")|| col.gameObject.CompareTag("HabitacionAgua")|| col.gameObject.CompareTag("HabitacionComida")|| col.gameObject.CompareTag("HabitacionVeterinario")|| col.gameObject.CompareTag("HabitacionDormitorio")|| col.gameObject.CompareTag("HabitacionPuertaEntrada")|| col.gameObject.CompareTag("Habitacion"))
+        if (col.gameObject.CompareTag("HabitacionElectricidad")|| 
+            col.gameObject.CompareTag("HabitacionAgua")|| 
+            col.gameObject.CompareTag("HabitacionComida")|| 
+            col.gameObject.CompareTag("HabitacionVeterinario")|| 
+            col.gameObject.CompareTag("HabitacionDormitorio")|| 
+            col.gameObject.CompareTag("HabitacionPuertaEntrada")|| 
+            col.gameObject.CompareTag("Habitacion")||
+            col.gameObject.CompareTag("HabitacionExpediciones"))
         {
             if (Mathf.Abs(rb.velocity.x) < velocidadTope)
             {
                 rb.AddForce(vectorVelocidad * velocidad);
             }
             scriptSalas = col.GetComponent<ConejosEnSala>();
-            if (scriptSalas.conejosDentro.Count < 3)
-            {
+            
+                if (scriptSalas.conejosDentro.Count < 3)
+                {
                 habitacionActual = col.transform;
                 fueraDeHabitacion = false;
-            }
+                }
+            
+           
         }
     }
 
@@ -52,7 +62,8 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             col.gameObject.CompareTag("HabitacionAgua")||
             col.gameObject.CompareTag("HabitacionVeterinario")||
             col.gameObject.CompareTag("HabitacionDormitorio")||
-            col.gameObject.CompareTag("HabitacionPuertaEntrada"))
+            col.gameObject.CompareTag("HabitacionPuertaEntrada")||
+            col.gameObject.CompareTag("HabitacionExpediciones"))
         {
             fueraDeHabitacion = true;
             rb.velocity = new Vector2(0,0);

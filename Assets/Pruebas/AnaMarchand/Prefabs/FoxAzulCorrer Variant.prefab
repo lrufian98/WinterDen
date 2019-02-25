@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6677038266018972248}
   m_Layer: 9
   m_Name: FoxAzulCorrer Variant
-  m_TagString: Untagged
+  m_TagString: Zorro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

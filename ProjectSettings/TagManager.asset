@@ -13,6 +13,7 @@ TagManager:
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
   - Conejos
+  - Zorro
   layers:
   - Default
   - TransparentFX
