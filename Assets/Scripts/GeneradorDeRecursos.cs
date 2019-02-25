@@ -20,13 +20,18 @@ public class GeneradorDeRecursos : MonoBehaviour
     public EstadisticasPJ statsPJ;
 
     public float tiempoExp;
-    
-    
+
+
+    void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GastoRecursos());
+        
+
     }
 
     // Update is called once per frame
@@ -189,26 +194,5 @@ public class GeneradorDeRecursos : MonoBehaviour
             }
         }
     }
-    IEnumerator GastoRecursos()
-    {
-        while (true)
-        {
-            Debug.Log("Bajando Recursos");
-            if (ControladorDeRecursos.comida > 0)
-            {
-                ControladorDeRecursos.comida--;
-
-
-            }
-            if (ControladorDeRecursos.agua > 0)
-            {
-                ControladorDeRecursos.agua--;
-            }
-
-            yield return new WaitForSeconds(30f);
-        }
-        
-
-
-    }
+    
 }
