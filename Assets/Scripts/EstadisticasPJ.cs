@@ -6,6 +6,8 @@ using UnityEngine;
 public class EstadisticasPJ : MonoBehaviour
 {
 
+    public float tiempoGastoRecursos = 5f;
+
     public float vidaMaxConejo = 20;
     public float vidaActualConejo;
     public bool regenerando = false;
@@ -173,7 +175,7 @@ public class EstadisticasPJ : MonoBehaviour
                 Debug.Log("Bajando Agua");
             }
 
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(tiempoGastoRecursos);
         }
 
 
@@ -190,7 +192,7 @@ public class EstadisticasPJ : MonoBehaviour
                 ControladorDeRecursos.comida--;
                 Debug.Log("Bajando Comida");
             }
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(tiempoGastoRecursos);
         }
 
 
