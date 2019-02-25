@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 2882168516072822066}
   - component: {fileID: 5621959598747696823}
   - component: {fileID: 1377085022}
+  - component: {fileID: 3986625679230661267}
   m_Layer: 10
   m_Name: Personaje
   m_TagString: Conejos
@@ -558,3 +559,16 @@ MonoBehaviour:
   vidaEncima: {fileID: 682407539}
   BVE: {fileID: 314402951}
   statsPJ: {fileID: 1339867871566993827}
+--- !u!114 &3986625679230661267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608237233854280045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c59e37f49d8b64bbe880eff058973a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosicionExpediciones: {fileID: 0}
