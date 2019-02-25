@@ -13,6 +13,8 @@ TagManager:
   - HabitacionDormitorio
   - HabitacionPuertaEntrada
   - Conejos
+  - HabitacionExpediciones
+  - HabitacionDelOlvido
   layers:
   - Default
   - TransparentFX
