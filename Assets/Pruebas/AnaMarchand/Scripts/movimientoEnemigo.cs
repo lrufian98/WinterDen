@@ -14,7 +14,7 @@ public class movimientoEnemigo : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Conejos");
 
         posicionInicial = transform.position;
     }

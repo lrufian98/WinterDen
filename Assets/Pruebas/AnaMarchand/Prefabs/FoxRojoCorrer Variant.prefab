@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1397752131422336604, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
+        type: 3}
+      propertyPath: m_TagString
+      value: Zorro
+      objectReference: {fileID: 0}
     - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}
       propertyPath: m_SortingOrder
