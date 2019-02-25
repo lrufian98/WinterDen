@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConejosEnSala : MonoBehaviour
 {
+    public float tiempoGastoElectricidad = 5;
 
     public List<GameObject> conejosDentro;
     public List<string> apellidosDentro;
@@ -49,7 +50,7 @@ public class ConejosEnSala : MonoBehaviour
                 ControladorDeRecursos.electricidad--;
             }
 
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(tiempoGastoElectricidad);
         }
 
 
