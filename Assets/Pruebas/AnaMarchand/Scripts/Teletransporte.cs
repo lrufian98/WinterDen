@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teletransporte : MonoBehaviour
 {
     public Transform destino;
+
     // Start is called before the first frame update
     void Start()
     {
