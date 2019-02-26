@@ -19,11 +19,16 @@ public class ControladorDeRecursos : MonoBehaviour
 
     public static float dinero;
 
+    public static float felicidadTotal = 0;
+
     public Image barraElectricidad;
     public Image barraComida;
     public Image barraAgua;
 
-    
+
+
+    public Text felicidadUI;
+    public Image caraFeliz;
 
     public Text vendasUI;
     public Text dineroUI;
@@ -35,6 +40,8 @@ public class ControladorDeRecursos : MonoBehaviour
     private void Awake()
     {
         numeroConejos = GameObject.Find("numeroConejos").GetComponent<Text>();
+        felicidadUI = GameObject.Find("TextoFelicidad").GetComponent<Text>();
+        caraFeliz = GameObject.Find("ImagenFelicidad").GetComponent<Image>();
     }
 
     // Start is called before the first frame update
@@ -65,6 +72,17 @@ public class ControladorDeRecursos : MonoBehaviour
         
 
         numeroConejos.text =GameObject.FindGameObjectsWithTag("Conejos").Length.ToString();
+        GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
+
+        felicidadTotal = 0;
+        foreach(GameObject conejo in conejos)
+        {
+            felicidadTotal += conejo.GetComponent<EstadisticasPJ>().felicidad / conejos.Length;
+        }
+        felicidadUI.text = Mathf.RoundToInt(felicidadTotal).ToString() + "%";
+        
+
+        GameObject.FindGameObjectsWithTag("Conejos");
     }
 
     public void DineroExpedicion()
