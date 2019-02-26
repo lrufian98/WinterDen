@@ -6,11 +6,19 @@ public class Expediciones : MonoBehaviour
 {
     public GameObject PosicionExpediciones;
     
-    Transform puntoOrigen;
+    public Vector3 puntoOrigen;
+    public GameObject HabitacionEntrada;
+
+
+    void Awake()
+    {
+        HabitacionEntrada = GameObject.Find("Habitacion Puerta Entrada");
+        PosicionExpediciones = GameObject.Find("HabitacionDelOlvido");
+    }
 
     public void OnMouseDown()
     {
-        puntoOrigen = gameObject.transform;
+        puntoOrigen = gameObject.transform.position;
         Debug.Log("Habitación Guardada");
     }
     public void OnCollisionEnter2D(Collision2D col)
@@ -24,16 +32,52 @@ public class Expediciones : MonoBehaviour
     {
         if (col.gameObject.CompareTag("HabitacionDelOlvido"))
         {
-            Debug.Log("Habitación Guardada");
-            Invoke("DeVuelta", Random.Range(2f, 3f));
+            Debug.Log("HabitaciónDelOlvido");
+            Invoke("DeVuelta", Random.Range(2f,3f));
         }
     }
 
     void DeVuelta()
     {
-        gameObject.transform.position = puntoOrigen.position;
+        gameObject.transform.position = HabitacionEntrada.transform.position;
+        Debug.Log("VoyDeVuelta");
+        Recompensa();
+        
     }
 
+    void Recompensa()
+    {
+        int resultado = Random.Range(1, 5);
+
+        switch (resultado)
+        { 
+
+            case 1 :
+                ControladorDeRecursos.dinero = ControladorDeRecursos.dinero  + Random.Range(20, 30);
+                Debug.Log("VoyDeVueltaMal");
+                Debug.Log(ControladorDeRecursos.dinero);
+                break;
+               
+            case 2 :
+                ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + Random.Range(200, 300);
+                Debug.Log("VoyDeVueltaNormal");
+                Debug.Log(ControladorDeRecursos.dinero);
+                break;
+            case 3 :
+                Destroy(gameObject);
+                Debug.Log("NoVoyDeVuelta");
+                break;
+
+            case 4 :
+                ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + Random.Range(2000, 3000);
+                Debug.Log("VoyDeVueltaChuchi");
+                Debug.Log(ControladorDeRecursos.dinero);
+                break;
+
+        }
+
+
+    }
 
 
 

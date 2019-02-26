@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf37b8e6269feb43b037e485e40e311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempoGastoRecursos: 5
   vidaMaxConejo: 10
   vidaActualConejo: 5
   regenerando: 0
@@ -572,3 +573,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PosicionExpediciones: {fileID: 0}
+  puntoOrigen: {x: 0, y: 0, z: 0}
+  HabitacionEntrada: {fileID: 0}
