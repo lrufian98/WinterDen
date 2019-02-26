@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class movimientoEnemigo : MonoBehaviour
 {
     public float visionRadius = 20;
-    public float velocidad = 1;
+    public float speed = 1;
 
     GameObject player;
 
@@ -21,6 +21,7 @@ public class movimientoEnemigo : MonoBehaviour
 
     void Update()
     {
+        /*
         Vector3 target = posicionInicial;
 
         float dist = Vector3.Distance(player.transform.position, transform.position);
@@ -36,6 +37,6 @@ public class movimientoEnemigo : MonoBehaviour
         else
         {
             GetComponent<SpriteRenderer>().flipX = false;
-        }
+        }*/
     }
 }

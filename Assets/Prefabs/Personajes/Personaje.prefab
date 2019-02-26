@@ -574,3 +574,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PosicionExpediciones: {fileID: 0}
+  puntoOrigen: {x: 0, y: 0, z: 0}
+  HabitacionEntrada: {fileID: 0}
