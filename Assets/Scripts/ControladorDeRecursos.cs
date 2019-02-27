@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class ControladorDeRecursos : MonoBehaviour
 {
-    public static float electricidad;
+    public static float electricidad = capacidadElectricidad;
     public static float capacidadElectricidad = 100f;
 
-    public static float comida;
+    public static float comida = capacidadComida;
     public static float capacidadComida = 100;
 
-    public static float agua;
+    
     public static float capacidadAgua = 100;
+    public static float agua = capacidadAgua;
 
     public static float vendas;
     public static float capacidadVendas = 10;
 
     public static float dinero;
 
-    public static float felicidadTotal = 0;
+    public static float felicidadTotal;
 
     public Image barraElectricidad;
     public Image barraComida;
@@ -80,6 +81,8 @@ public class ControladorDeRecursos : MonoBehaviour
             felicidadTotal += conejo.GetComponent<EstadisticasPJ>().felicidad / conejos.Length;
         }
         felicidadUI.text = Mathf.RoundToInt(felicidadTotal).ToString() + "%";
+
+       
         
 
         GameObject.FindGameObjectsWithTag("Conejos");

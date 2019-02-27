@@ -57,7 +57,17 @@ public class EstadisticasPJ : MonoBehaviour
 
     public float felicidad = 50;
 
+    int nivelComida = 0;
+    int debufoComida = 0;
+
+    int nivelElectricidad = 0;
+    int debufoElectricidad = 0;
+   
+
+
     
+
+
 
     private void Awake()
     {
@@ -69,6 +79,9 @@ public class EstadisticasPJ : MonoBehaviour
     {
         StartCoroutine(GastoComida());
         StartCoroutine(GastoAgua());
+
+        StartCoroutine(FelicidadRecursos());
+
         vidaActualConejo = vidaMaxConejo;
 
         aptitud = Random.Range(1, 4);
@@ -128,6 +141,56 @@ public class EstadisticasPJ : MonoBehaviour
 
         nivelTotal = aptitud + carisma + tecnica + inteligencia + vida + energia + suerte;
 
+
+        if (felicidad >100)
+        {
+            felicidad = 100;
+        }
+
+
+        if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <=1 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida >0.5)
+        {
+            nivelComida = 0;
+        }
+        else if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <= 0.5 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida > 0.25)
+        {
+            nivelComida = 1;
+        }
+        else if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <= 0.25 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida > 0.1)
+        {
+            nivelComida = 2;
+        }
+        else if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <= 0.1 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida > 0.05)
+        {
+            nivelComida = 3;
+        }
+        else if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <= 0.05 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida >= 0)
+        {
+            nivelComida = 4;
+        }
+
+        if (ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad <= 1 && ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad > 0.5)
+        {
+            nivelElectricidad = 0;
+        }
+        else if (ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad <= 0.5 && ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad > 0.25)
+        {
+            nivelElectricidad = 1;
+        }
+        else if (ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad <= 0.25 && ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad > 0.1)
+        {
+            nivelElectricidad = 2;
+        }
+        else if (ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad <= 0.1 && ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad > 0.05)
+        {
+            nivelElectricidad = 3;
+        }
+        else if (ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad <= 0.05 && ControladorDeRecursos.electricidad / ControladorDeRecursos.capacidadElectricidad >= 0)
+        {
+            nivelElectricidad = 4;
+        }
+
+
     }
 
   
@@ -145,6 +208,75 @@ public class EstadisticasPJ : MonoBehaviour
         regenerando = false;
     }
 
+    IEnumerator FelicidadRecursos()
+    {
+        while (true)
+        {
+            switch (nivelComida)
+            {
+                case 0 :
+                    
+                    Debug.Log("No te rayes la comida bien");
+                    if (debufoComida == 1)
+                    {
+                        felicidad += 4;
+                    }
+                    debufoComida = 0;
+                    break;
+
+                case 1:
+                    if (debufoComida != 1)
+                    {
+                        if (debufoComida == 2)
+                        {
+                            felicidad += 6;
+                        }
+                        felicidad += -4;
+                        debufoComida = 1;
+                    }
+                    
+                    break;
+
+                case 2:
+                    if (debufoComida != 2)
+                    {
+                        if(debufoComida == 3)
+                        {
+                            felicidad += 8;
+                        }
+                        felicidad += -6;
+                        debufoComida = 2;
+                    }
+                    
+                    break;
+
+                case 3:
+                    if (debufoComida!=3)
+                    {
+                        if (debufoComida == 4)
+                        {
+                            felicidad += 10;
+                        }
+                        felicidad += -8;
+                        debufoComida = 3;
+                    }
+                    break;
+
+                case 4:
+                    if (debufoComida!=4)
+                    {
+                        felicidad += -10;
+                        debufoComida = 4;
+                    }
+
+                    break;
+
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
     public void UsaVendas()
     {
         if (ControladorDeRecursos.vendas>0)
@@ -153,6 +285,7 @@ public class EstadisticasPJ : MonoBehaviour
             if (vidaActualConejo < vidaMaxConejo)
             {
                 vidaActualConejo = vidaActualConejo + (vidaMaxConejo / 2);
+                felicidad += 10;
                 if (vidaActualConejo > vidaMaxConejo)
                 {
                     vidaActualConejo = vidaMaxConejo;
