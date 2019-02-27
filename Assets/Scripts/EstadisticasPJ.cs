@@ -55,6 +55,10 @@ public class EstadisticasPJ : MonoBehaviour
     public string nombre;
     public string apellido;
 
+    public float felicidad = 50;
+
+    
+
     private void Awake()
     {
         scriptEnlaceUI=GameObject.Find("ControladorDeBotonVendas").GetComponent<GestorBotonCuracion>();

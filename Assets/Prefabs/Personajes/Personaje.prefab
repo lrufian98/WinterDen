@@ -510,6 +510,7 @@ MonoBehaviour:
   - Kardashian
   nombre: 
   apellido: 
+  felicidad: 50
 --- !u!114 &2882168516072822066
 MonoBehaviour:
   m_ObjectHideFlags: 0
