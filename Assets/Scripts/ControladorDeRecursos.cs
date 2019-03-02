@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class ControladorDeRecursos : MonoBehaviour
 {
-    public static float electricidad = capacidadElectricidad;
-    public static float capacidadElectricidad = 100f;
-
-    public static float comida = capacidadComida;
-    public static float capacidadComida = 100;
-
     
+    public static float capacidadElectricidad = 100f;
+    public static float electricidad = capacidadElectricidad;
+
+
+    public static float capacidadComida = 100;
+    public static float comida = capacidadComida;
+
+
     public static float capacidadAgua = 100;
     public static float agua = capacidadAgua;
 
