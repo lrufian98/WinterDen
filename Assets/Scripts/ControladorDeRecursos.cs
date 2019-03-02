@@ -31,6 +31,14 @@ public class ControladorDeRecursos : MonoBehaviour
     public Text felicidadUI;
     public Image caraFeliz;
 
+    public Sprite feliz100;
+    public Sprite feliz80;
+    public Sprite feliz60;
+    public Sprite feliz40;
+    public Sprite feliz20;
+
+
+
     public Text vendasUI;
     public Text dineroUI;
 
@@ -81,9 +89,28 @@ public class ControladorDeRecursos : MonoBehaviour
             felicidadTotal += conejo.GetComponent<EstadisticasPJ>().felicidad / conejos.Length;
         }
         felicidadUI.text = Mathf.RoundToInt(felicidadTotal).ToString() + "%";
+        if (felicidadTotal<=100 && felicidadTotal > 80)
+        {
+            caraFeliz.sprite = feliz100;
+        }
+        if (felicidadTotal <= 80 && felicidadTotal > 60)
+        {
+            caraFeliz.sprite = feliz80;
+        }
+        if (felicidadTotal <= 60 && felicidadTotal > 40)
+        {
+            caraFeliz.sprite = feliz60;
+        }
+        if (felicidadTotal <= 40 && felicidadTotal > 20)
+        {
+            caraFeliz.sprite = feliz40;
+        }
+        if (felicidadTotal <= 20 && felicidadTotal >= 0)
+        {
+            caraFeliz.sprite = feliz20;
+        }
 
-       
-        
+
 
         GameObject.FindGameObjectsWithTag("Conejos");
     }

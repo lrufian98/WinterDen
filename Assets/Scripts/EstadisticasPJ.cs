@@ -62,10 +62,13 @@ public class EstadisticasPJ : MonoBehaviour
 
     int nivelElectricidad = 0;
     int debufoElectricidad = 0;
-   
+
+    int nivelAgua = 0;
+    int debufoAgua = 0;
 
 
-    
+
+
 
 
 
@@ -191,10 +194,51 @@ public class EstadisticasPJ : MonoBehaviour
         }
 
 
+
+        if (ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua <= 1 && ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua > 0.5)
+        {
+            nivelAgua = 0;
+        }
+        else if (ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua <= 0.5 && ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua > 0.25)
+        {
+            nivelAgua = 1;
+        }
+        else if (ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua <= 0.25 && ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua > 0.1)
+        {
+            nivelAgua = 2;
+        }
+        else if (ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua <= 0.1 && ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua > 0.05)
+        {
+            nivelAgua = 3;
+        }
+        else if (ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua <= 0.05 && ControladorDeRecursos.agua / ControladorDeRecursos.capacidadAgua >= 0)
+        {
+            nivelAgua = 4;
+        }
+
+
     }
 
-  
-   IEnumerator RegenerarVida()
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("HabitacionDormitorio"))
+        {
+            felicidad += +5;
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("HabitacionDormitorio"))
+        {
+            felicidad += -5;
+        }
+    }
+
+    
+
+
+    IEnumerator RegenerarVida()
     {
         
         while (!enCombate && vidaActualConejo < vidaMaxConejo)
@@ -267,6 +311,125 @@ public class EstadisticasPJ : MonoBehaviour
                     {
                         felicidad += -10;
                         debufoComida = 4;
+                    }
+
+                    break;
+
+            }
+
+            switch (nivelElectricidad)
+            {
+                case 0:
+
+                    Debug.Log("No te rayes la electricidad bien");
+                    if (debufoElectricidad == 1)
+                    {
+                        felicidad += 4;
+                    }
+                    debufoElectricidad = 0;
+                    break;
+
+                case 1:
+                    if (debufoElectricidad != 1)
+                    {
+                        if (debufoElectricidad == 2)
+                        {
+                            felicidad += 6;
+                        }
+                        felicidad += -4;
+                        debufoElectricidad = 1;
+                    }
+
+                    break;
+
+                case 2:
+                    if (debufoElectricidad != 2)
+                    {
+                        if (debufoElectricidad == 3)
+                        {
+                            felicidad += 8;
+                        }
+                        felicidad += -6;
+                        debufoElectricidad = 2;
+                    }
+                    break;
+
+                case 3:
+                    if (debufoElectricidad != 3)
+                    {
+                        if (debufoElectricidad == 4)
+                        {
+                            felicidad += 10;
+                        }
+                        felicidad += -8;
+                        debufoElectricidad = 3;
+                    }
+                    break;
+
+                case 4:
+                    if (debufoElectricidad != 4)
+                    {
+                        felicidad += -10;
+                        debufoElectricidad = 4;
+                    }
+                    break;
+
+            }
+            switch (nivelAgua)
+            {
+                case 0:
+
+                    Debug.Log("No te rayes el agua bien");
+                    if (debufoAgua == 1)
+                    {
+                        felicidad += 4;
+                    }
+                    debufoAgua = 0;
+                    break;
+
+                case 1:
+                    if (debufoAgua != 1)
+                    {
+                        if (debufoAgua == 2)
+                        {
+                            felicidad += 6;
+                        }
+                        felicidad += -4;
+                        debufoAgua = 1;
+                    }
+
+                    break;
+
+                case 2:
+                    if (debufoAgua != 2)
+                    {
+                        if (debufoAgua == 3)
+                        {
+                            felicidad += 8;
+                        }
+                        felicidad += -6;
+                        debufoAgua = 2;
+                    }
+
+                    break;
+
+                case 3:
+                    if (debufoAgua != 3)
+                    {
+                        if (debufoAgua == 4)
+                        {
+                            felicidad += 10;
+                        }
+                        felicidad += -8;
+                        debufoAgua = 3;
+                    }
+                    break;
+
+                case 4:
+                    if (debufoAgua != 4)
+                    {
+                        felicidad += -10;
+                        debufoAgua = 4;
                     }
 
                     break;
