@@ -5,6 +5,8 @@ using UnityEngine;
 public class AtaqueEnemigo : MonoBehaviour
 {
 
+    public LayerMask layerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,23 +17,24 @@ public class AtaqueEnemigo : MonoBehaviour
     void Update()
     {
 
-        // Bit shift the index of the layer (8) to get a bit mask
-        int layerMask = 1 << 8;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), 1, layerMask);
 
-        // This would cast rays only against colliders in layer 8.
-        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-        layerMask = ~layerMask;
 
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity, layerMask))
+
+
+
+
+        if (hit)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.yellow);
+            Debug.Log("Did Hit " + hit.transform.name);
+           
+
+            hit.collider.gameObject.GetComponent<EstadisticasPJ>().QuitaVida(1);
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1000, Color.white);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.white);
             Debug.Log("Did not Hit");
         }
     }

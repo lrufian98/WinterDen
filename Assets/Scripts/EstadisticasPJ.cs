@@ -498,5 +498,15 @@ public class EstadisticasPJ : MonoBehaviour
 
     }
 
+    public void QuitaVida(int cantidad)
+    {
+        vida -= cantidad;
+        GetComponent<ArrastreHabitacionLRC>().RecibirDanoConejo();
+
+        if (vida <=0)
+        {
+           GetComponent<ArrastreHabitacionLRC>().MorirConejo();
+        }
+    } 
 
 }

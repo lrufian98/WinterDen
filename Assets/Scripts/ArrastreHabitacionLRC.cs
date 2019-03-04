@@ -11,13 +11,13 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     public ConejosEnSala scriptSalas;
     bool fueraDeHabitacion;
     SpriteRenderer spritePJ;
-
+    public static ArrastreHabitacionLRC instancia;
     Animator animPJ;
 
     
     public Vector2 vectorVelocidad;
 
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +94,17 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     {
         vectorVelocidad.x = 0;
         Invoke("ReiniciarMovimiento", Random.Range(1f, 3f));
+    }
+    public void MorirConejo()
+    {
+        vectorVelocidad.x = 0;
+        animPJ.SetTrigger("Morir");
+        Destroy(gameObject, 5f);
+    }
+    public void RecibirDanoConejo()
+    {
+        vectorVelocidad.x = 0;
+        animPJ.SetTrigger("Dano");
     }
 
     public void ReiniciarMovimiento()
