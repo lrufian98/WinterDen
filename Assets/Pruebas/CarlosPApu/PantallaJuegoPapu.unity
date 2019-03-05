@@ -447,6 +447,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4017609123750914db34b7c16a407ea1, type: 3}
+--- !u!1 &89292532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7617181602593913352, guid: c43d027cdf4f7734b95102b59d7bacc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1661305034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &97673271
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +512,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 838c75853da3c8544b6cb639664522ee, type: 3}
-    m_FontSize: 26
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -516,10 +522,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.133
-  m_Text: " 00.00\n 00.03\n 00.08\n 00.11\n 00.15\n 00.19\n 00.22 \n 00.24\n 00.27\n
-    00.32\n 00.35\n 00.39\n 00.41\n 00.46\n 00.48\n 00.52\n 00.55\n 00.58\n 00.60
-    \n \n "
+    m_LineSpacing: 1.2
+  m_Text: " 00.00 -\n 00.03 -\n 00.08 -\n 00.11 -\n 00.15 -\n 00.19 -\n 00.22 -\n
+    00.24 -\n 00.27 -\n 00.32 -\n 00.35 -\n 00.39 -\n 00.41 -\n 00.46 -\n 00.48 -\n
+    00.52 -\n 00.55 -\n 00.58 -\n 00.60 -\n  \n\n "
 --- !u!222 &97673274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2722,10 +2728,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a5375a38f70f2a04690188f43ca2d603, type: 3}
-    m_FontSize: 26
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3763,6 +3769,7 @@ MonoBehaviour:
   animMenuMenus: {fileID: 760758181}
   animMenuAjustes: {fileID: 341097356}
   animMenuMejora: {fileID: 561358241}
+  animMenuExpediciones: {fileID: 258492164}
 --- !u!4 &1187497406
 Transform:
   m_ObjectHideFlags: 0
@@ -4341,7 +4348,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1187497405}
-        m_MethodName: ApareceMenuAjustes
+        m_MethodName: DesapareceMenuExpediciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6922,6 +6929,16 @@ PrefabInstance:
       propertyPath: PosicionExpediciones
       value: 
       objectReference: {fileID: 514115192}
+    - target: {fileID: 3986625679230661267, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: HabitacionEntrada
+      value: 
+      objectReference: {fileID: 89292532}
+    - target: {fileID: 3986625679230661267, guid: ae3305cc6a88af549b2fcf75064439ce,
+        type: 3}
+      propertyPath: animacionMenuExpediciones
+      value: 
+      objectReference: {fileID: 258492164}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
 --- !u!1001 &7003840080799848049
