@@ -867,6 +867,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1971892311, guid: ba3d003b125b07e4cbb0aae378d08ee7, type: 3}
+      propertyPath: danoEnemigo
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3d003b125b07e4cbb0aae378d08ee7, type: 3}
 --- !u!114 &499997664 stripped
@@ -4939,11 +4943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 314402949, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
+    - target: {fileID: 682407537, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 682407537, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
+    - target: {fileID: 314402949, guid: ae3305cc6a88af549b2fcf75064439ce, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
