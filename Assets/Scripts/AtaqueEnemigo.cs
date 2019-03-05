@@ -7,18 +7,22 @@ public class AtaqueEnemigo : MonoBehaviour
 
     public LayerMask layerMask;
 
+    GameObject golpeado;
+    public float danoEnemigo;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Atacando());
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), 1, layerMask);
 
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), 1, layerMask);
 
 
 
@@ -28,14 +32,29 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.yellow);
             Debug.Log("Did Hit " + hit.transform.name);
-           
 
-            hit.collider.gameObject.GetComponent<EstadisticasPJ>().QuitaVida(1);
+
+            golpeado = hit.collider.gameObject;
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.white);
             Debug.Log("Did not Hit");
+            golpeado = null;
         }
+    }
+
+
+    IEnumerator Atacando()
+    {
+        while (true)
+        {
+            if (golpeado != null)
+            {
+                golpeado.GetComponent<EstadisticasPJ>().QuitaVida(danoEnemigo);
+            }
+            yield return new WaitForSeconds(2f);
+        }
+
     }
 }
