@@ -36,7 +36,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             direction = Vector2.right;
         else
             direction = Vector2.left;
-            
+
         RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction, 1, layerMask);
 
 
@@ -133,6 +133,16 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     {
         vectorVelocidad.x = 0;
         animPJ.SetTrigger("Morir");
+        GetComponent<EstadisticasPJ>().felicidad = 0;
+
+
+        GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
+
+        foreach(GameObject conejo in conejos)
+        {
+            conejo.GetComponent<EstadisticasPJ>().felicidad-= 10;
+        }
+
         Destroy(gameObject, 5f);
     }
     public void RecibirDanoConejo()

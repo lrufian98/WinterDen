@@ -66,6 +66,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  danoEnemigo: 1
 --- !u!1001 &4275222950043647798
 PrefabInstance:
   m_ObjectHideFlags: 0

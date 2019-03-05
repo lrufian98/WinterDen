@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 400272581}
   - component: {fileID: 400272583}
   - component: {fileID: 400272582}
+  - component: {fileID: 598644197}
   m_Layer: 5
   m_Name: TextoFelicidad
   m_TagString: Untagged
@@ -154,6 +155,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 60%
+--- !u!114 &598644197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400272580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &907127072
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1011,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0fcfd204e9ca94b47add9596cea259ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d70c8456cbe8df04396af0f9c4297589, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2156,6 +2172,7 @@ GameObject:
   - component: {fileID: 1503553178438695773}
   - component: {fileID: 1503553178438695747}
   - component: {fileID: 1503553178438695746}
+  - component: {fileID: 1373993202}
   m_Layer: 5
   m_Name: numeroDinero
   m_TagString: Untagged
@@ -2224,6 +2241,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 55.678
+--- !u!114 &1373993202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503553178438695772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1503553178450171218
 GameObject:
   m_ObjectHideFlags: 0

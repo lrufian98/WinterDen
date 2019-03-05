@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5831547958669272991}
   - component: {fileID: 5831547958669272990}
   m_Layer: 0
-  m_Name: ControlRecursos
+  m_Name: ControladorDeRecursos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,8 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60843134af279e45beec206dd38db60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricidadUI: {fileID: 0}
-  comidaUI: {fileID: 0}
-  aguaUI: {fileID: 0}
+  barraElectricidad: {fileID: 0}
+  barraComida: {fileID: 0}
+  barraAgua: {fileID: 0}
+  felicidadUI: {fileID: 0}
+  caraFeliz: {fileID: 0}
+  feliz100: {fileID: 21300000, guid: c72520c71fba05045a5ee4ca1f9de3fd, type: 3}
+  feliz80: {fileID: 21300000, guid: ebbede1b82490c1478902550bf607bcd, type: 3}
+  feliz60: {fileID: 21300000, guid: ccf55b8a6f9266e4fa3307825d208234, type: 3}
+  feliz40: {fileID: 21300000, guid: 16fe5be26348b1348bd48c5968731500, type: 3}
+  feliz20: {fileID: 21300000, guid: 63218029c18682243a5b2b8c9dfcba02, type: 3}
   vendasUI: {fileID: 0}
   dineroUI: {fileID: 0}
+  numeroConejos: {fileID: 0}
