@@ -498,7 +498,7 @@ public class EstadisticasPJ : MonoBehaviour
 
     }
 
-    public void QuitaVida(float cantidad)
+    public void QuitaVida(float cantidad) 
     {
         vidaActualConejo -= cantidad;
         GetComponent<ArrastreHabitacionLRC>().RecibirDanoConejo();

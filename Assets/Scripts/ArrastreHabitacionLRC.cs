@@ -21,6 +21,8 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     public LayerMask layerMask;
     GameObject golpeado;
 
+    bool enCombate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,14 +50,23 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.yellow);
             Debug.Log("Did Hit " + hit.transform.name);
 
-
-            golpeado = hit.collider.gameObject;
+            if (golpeado == null)
+            {
+                golpeado = hit.collider.gameObject;
+                StartCoroutine(ConejoAtacando());                
+            }
+            
+            enCombate = true;
+            animPJ.SetBool("EnCombate",enCombate);
         }
         else
         {
             Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
+            enCombate = false;
+            animPJ.SetBool("EnCombate", enCombate);
+            StopAllCoroutines();
         }
     }
 
@@ -151,13 +162,27 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         animPJ.SetTrigger("Dano");
     }
 
+    public void VuelveAndar()
+    {
+        if (!enCombate)
+        {
+            vectorVelocidad.x = 1;
+            rb.AddForce(vectorVelocidad * velocidad);
+        }
+        
+    }
+
     IEnumerator ConejoAtacando()
     {
-        if (golpeado != null)
+        vectorVelocidad.x = 0;
+        while (true)
         {
-            
+            if (golpeado != null)
+            {
+                animPJ.SetTrigger("Punetazo");
+            }
+            yield return new WaitForSeconds(2f);
         }
-        yield return new WaitForSeconds(2f);
 
     }
 

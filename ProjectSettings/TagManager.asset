@@ -16,6 +16,7 @@ TagManager:
   - Zorro
   - HabitacionDelOlvido
   - HabitacionExpediciones
+  - BebesConejos
   layers:
   - Default
   - TransparentFX

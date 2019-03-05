@@ -14,7 +14,7 @@ public class AtaqueEnemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Atacando());
+        
     }
 
     // Update is called once per frame
@@ -33,14 +33,19 @@ public class AtaqueEnemigo : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.yellow);
             Debug.Log("Did Hit " + hit.transform.name);
 
-
-            golpeado = hit.collider.gameObject;
+            if (golpeado == null)
+            {
+                StartCoroutine(Atacando());
+                golpeado = hit.collider.gameObject;
+            }
+            
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
+            StopAllCoroutines();
         }
     }
 
