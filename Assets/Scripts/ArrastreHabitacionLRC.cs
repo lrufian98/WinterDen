@@ -36,6 +36,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             direction = Vector2.right;
         else
             direction = Vector2.left;
+            
         RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction, 1, layerMask);
 
 
