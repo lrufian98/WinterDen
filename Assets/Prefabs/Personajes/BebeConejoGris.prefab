@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1518689174}
   m_Layer: 11
   m_Name: BebeConejoGris
-  m_TagString: Conejos
+  m_TagString: BebesConejos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
