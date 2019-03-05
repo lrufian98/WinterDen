@@ -31,7 +31,12 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), transform.TransformDirection(Vector3.right), 1, layerMask);
+        Vector2 direction;
+        if (spritePJ.flipX)
+            direction = Vector2.right;
+        else
+            direction = Vector2.left;
+        RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction, 1, layerMask);
 
 
 
@@ -39,7 +44,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
         if (hit)
         {
-            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), transform.TransformDirection(Vector3.right) * 1, Color.yellow);
+            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.yellow);
             Debug.Log("Did Hit " + hit.transform.name);
 
 
@@ -47,7 +52,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), transform.TransformDirection(Vector3.right) * 1, Color.white);
+            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
         }
