@@ -23,7 +23,10 @@ public class ZorroScript : MonoBehaviour
         vidaZorro = vidaZorro + Mathf.RoundToInt(numeroConejos/5);
     }
 
-
+    void SaqueoDinero()
+    {
+        ControladorDeRecursos.dinero += Random.Range(25, 200);
+    }
 
     
 }
