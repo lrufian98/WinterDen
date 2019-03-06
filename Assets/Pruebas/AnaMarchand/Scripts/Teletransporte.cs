@@ -23,6 +23,7 @@ public class Teletransporte : MonoBehaviour
         if (col.CompareTag("Zorro"))
         {
             col.transform.position = destino.position;
+            col.gameObject.GetComponent<movimientoZorro>().flip();
         }
     }
 }
