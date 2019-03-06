@@ -34,8 +34,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37500587, y: -0.083334394}
-  m_Size: {x: 1.8455127, y: 4.945548}
+  m_Offset: {x: 0.3525846, y: -0.083334394}
+  m_Size: {x: 2.0533957, y: 4.945548}
   m_Direction: 0
 --- !u!114 &1991959093
 MonoBehaviour:
@@ -50,7 +50,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadius: 20
-  velocidad: 1
+  speed: 1
+--- !u!114 &7221030235469269394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6350375002075598447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac85a164585f0341b560d86246b344a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  danoEnemigo: 2
 --- !u!1001 &6260895019200854571
 PrefabInstance:
   m_ObjectHideFlags: 0

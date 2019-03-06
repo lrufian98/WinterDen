@@ -243,11 +243,11 @@ public class EstadisticasPJ : MonoBehaviour
         
         while (!enCombate && vidaActualConejo < vidaMaxConejo)
         {
-            
+           
             regenerando = true;
             vidaActualConejo++;
-            yield return new WaitForSeconds(1f);
-            
+            yield return new WaitForSeconds(5f);
+
         }
         regenerando = false;
     }
@@ -498,5 +498,15 @@ public class EstadisticasPJ : MonoBehaviour
 
     }
 
+    public void QuitaVida(float cantidad) 
+    {
+        vidaActualConejo -= cantidad;
+        GetComponent<ArrastreHabitacionLRC>().RecibirDanoConejo();
+
+        if (vidaActualConejo <=0)
+        {
+           GetComponent<ArrastreHabitacionLRC>().MorirConejo();
+        }
+    } 
 
 }

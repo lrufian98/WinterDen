@@ -50,7 +50,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadius: 20
-  velocidad: 1
+  speed: 1
+--- !u!114 &1971892311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896224366139001194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac85a164585f0341b560d86246b344a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  danoEnemigo: 1
 --- !u!1001 &4275222950043647798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,7 +92,7 @@ PrefabInstance:
     - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4031624372314451573, guid: 60b1b6c64f2d9bb49874f4d3a509a962,
         type: 3}

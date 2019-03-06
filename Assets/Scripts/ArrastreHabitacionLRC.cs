@@ -11,12 +11,17 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     public ConejosEnSala scriptSalas;
     bool fueraDeHabitacion;
     SpriteRenderer spritePJ;
-
+    public static ArrastreHabitacionLRC instancia;
     Animator animPJ;
 
     
     public Vector2 vectorVelocidad;
 
+
+    public LayerMask layerMask;
+    GameObject golpeado;
+
+    bool enCombate;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +29,45 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spritePJ = GetComponent<SpriteRenderer>();
         animPJ = GetComponent<Animator>();
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 direction;
+        if (spritePJ.flipX)
+            direction = Vector2.right;
+        else
+            direction = Vector2.left;
+
+        RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction, 1, layerMask);
+
+
+
+
+
+        if (hit)
+        {
+            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.yellow);
+            Debug.Log("Did Hit " + hit.transform.name);
+
+            if (golpeado == null)
+            {
+                golpeado = hit.collider.gameObject;
+                StartCoroutine(ConejoAtacando());                
+            }
+            
+            enCombate = true;
+            animPJ.SetBool("EnCombate",enCombate);
+        }
+        else
+        {
+            Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.white);
+            Debug.Log("Did not Hit");
+            golpeado = null;
+            enCombate = false;
+            animPJ.SetBool("EnCombate", enCombate);
+            StopAllCoroutines();
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +120,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     void EscribirEnCuaderno()
     {
         animPJ.SetBool("Escribir",true);
+        PararMovimiento();
     }
 
 
@@ -95,12 +140,58 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         vectorVelocidad.x = 0;
         Invoke("ReiniciarMovimiento", Random.Range(1f, 3f));
     }
+    public void MorirConejo()
+    {
+        vectorVelocidad.x = 0;
+        animPJ.SetTrigger("Morir");
+        GetComponent<EstadisticasPJ>().felicidad = 0;
+
+
+        GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
+
+        foreach(GameObject conejo in conejos)
+        {
+            conejo.GetComponent<EstadisticasPJ>().felicidad-= 10;
+        }
+
+        Destroy(gameObject, 5f);
+    }
+    public void RecibirDanoConejo()
+    {
+        vectorVelocidad.x = 0;
+        animPJ.SetTrigger("Dano");
+    }
+
+    public void VuelveAndar()
+    {
+        if (!enCombate)
+        {
+            vectorVelocidad.x = 1;
+            rb.AddForce(vectorVelocidad * velocidad);
+        }
+        
+    }
+
+    IEnumerator ConejoAtacando()
+    {
+        vectorVelocidad.x = 0;
+        while (true)
+        {
+            if (golpeado != null)
+            {
+                animPJ.SetTrigger("Punetazo");
+            }
+            yield return new WaitForSeconds(2f);
+        }
+
+    }
 
     public void ReiniciarMovimiento()
     {
-        animPJ.SetBool("Escribir", false);
+        animPJ.SetBool("Escribir",false);
         vectorVelocidad.x = 1;
         rb.AddForce(vectorVelocidad * velocidad);
+        
     }
 
     private void OnMouseDrag()

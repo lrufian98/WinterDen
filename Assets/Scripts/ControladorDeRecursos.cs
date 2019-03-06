@@ -82,7 +82,7 @@ public class ControladorDeRecursos : MonoBehaviour
         barraAgua.fillAmount = agua / capacidadAgua;
         
 
-        numeroConejos.text =GameObject.FindGameObjectsWithTag("Conejos").Length.ToString();
+        numeroConejos.text = "" +( GameObject.FindGameObjectsWithTag("Conejos").Length + GameObject.FindGameObjectsWithTag("BebesConejos").Length);
         GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
 
         felicidadTotal = 0;

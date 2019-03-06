@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class AbrirInfoConejo : MonoBehaviour
+public class abrirInfoConejo : MonoBehaviour
 {
     
     Animator animInfoConejo;

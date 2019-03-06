@@ -8,6 +8,7 @@ public class ControladorIterfaz : MonoBehaviour
     public Animator animMenuMenus;
     public Animator animMenuAjustes;
     public Animator animMenuMejora;
+    public Animator animMenuExpediciones;
 
     bool activaMenuAjustes = false;
     bool activaMenuMenus = false;
@@ -42,5 +43,8 @@ public class ControladorIterfaz : MonoBehaviour
         activaMenuMejora = !activaMenuMejora;
         animMenuMejora.SetBool("MenuActivo", activaMenuMejora);
     }
-
+    public void DesapareceMenuExpediciones()
+    {
+        animMenuExpediciones.SetBool("MenuActivo", false);
+    }
 }
