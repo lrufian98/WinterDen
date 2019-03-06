@@ -37,7 +37,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.3525846, y: -0.083334394}
   m_Size: {x: 2.0533957, y: 4.945548}
   m_Direction: 0
---- !u!114 &1991959093
+--- !u!114 &1892446238637059705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,11 +46,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6350375002075598447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011f410f52055d44cbc0eb2267d1c01c, type: 3}
+  m_Script: {fileID: 11500000, guid: e2d5a21f2e5c2514eade5959e0c341e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadius: 20
-  speed: 1
+  velocidad: 1
 --- !u!114 &7221030235469269394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +66,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   danoEnemigo: 2
+--- !u!114 &5812952796010178363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6350375002075598447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60603cd8c4f7fd643af6adde5d003e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaZorro: 10
+  numeroConejos: 0
 --- !u!1001 &6260895019200854571
 PrefabInstance:
   m_ObjectHideFlags: 0

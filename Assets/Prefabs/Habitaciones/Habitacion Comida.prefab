@@ -142,8 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ab307e1c82eda4289ff6772fae0ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempoGastoElectricidad: 5
   conejosDentro: []
-  salaLlena: 0
+  apellidosDentro: []
 --- !u!1 &8424644036272952774
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8424644036272952773}
   - component: {fileID: 8424644036272952772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared Derecha
   m_TagString: Pared
   m_Icon: {fileID: 0}
@@ -211,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8424644038026732061}
   - component: {fileID: 8424644038026732060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared Izquierda
   m_TagString: Pared
   m_Icon: {fileID: 0}
