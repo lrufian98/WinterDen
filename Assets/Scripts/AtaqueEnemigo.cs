@@ -9,12 +9,12 @@ public class AtaqueEnemigo : MonoBehaviour
 
     GameObject golpeado;
     public float danoEnemigo;
-
-
+    Animator animZorro;
+    bool enCombate;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animZorro = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,15 +37,23 @@ public class AtaqueEnemigo : MonoBehaviour
             {
                 StartCoroutine(Atacando());
                 golpeado = hit.collider.gameObject;
+                
             }
-            
+            enCombate = true;
+            GetComponent<movimientoZorro>().velocidad = 0;
+            animZorro.SetBool("EnCombate", enCombate);
+
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
+            enCombate = false;
+            GetComponent<movimientoZorro>().velocidad = 1;
+            animZorro.SetBool("EnCombate", enCombate);
             StopAllCoroutines();
+
         }
     }
 
@@ -56,6 +64,7 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             if (golpeado != null)
             {
+                animZorro.SetTrigger("Ataque");
                 golpeado.GetComponent<EstadisticasPJ>().QuitaVida(danoEnemigo);
             }
             yield return new WaitForSeconds(2f);

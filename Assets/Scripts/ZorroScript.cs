@@ -5,7 +5,8 @@ using UnityEngine;
 public class ZorroScript : MonoBehaviour
 {
     public int vidaZorro = 10;
-    public float numeroConejos = 0f; 
+    public float numeroConejos = 0f;
+    Animator animZorro;
 
     
     
@@ -14,7 +15,7 @@ public class ZorroScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animZorro = GetComponent<Animator>();
     }
 
     private void Awake()
@@ -23,14 +24,36 @@ public class ZorroScript : MonoBehaviour
         vidaZorro = vidaZorro + Mathf.RoundToInt(numeroConejos/5);
     }
 
-<<<<<<< HEAD
-=======
+
     void SaqueoDinero()
     {
-        ControladorDeRecursos.dinero += Random.Range(25, 200);
+        ControladorDeRecursos.dinero += Random.Range(25, 50);
     }
->>>>>>> a06df21601ba6fb6dfcb9a5d55588a4a45b8c1f3
 
-    
+    public void QuitaVida(int cantidad)
+    {
+        vidaZorro -= cantidad;
+        RecibirDanoZorro();
+
+        if (vidaZorro <= 0)
+        {
+            MorirZorro();
+        }
+    }
+
+    public void RecibirDanoZorro()
+    {
+        GetComponent<movimientoZorro>().velocidad = 0;
+        animZorro.SetTrigger("Dano");
+    }
+
+    public void MorirZorro()
+    {
+        SaqueoDinero();
+        Destroy(gameObject, 1f);
+        animZorro.SetTrigger("Morir");
+    }
+
+
 
 }
