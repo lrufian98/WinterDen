@@ -5,24 +5,24 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 
-    public static AudioClip pasos;
-    static AudioSource audioSrc;
+   // public static AudioClip pasos;
+    //static AudioSource audioSrc;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        pasos = Resources.Load<AudioClip>("Conejos", "Zorros");
+   // void Start()
+   // {
+   //     pasos = Resources.Load<AudioClip>("Conejos", "Zorros");
 
-        audioSrc = GetComponent<AudioSource>();
-    }
+   //     audioSrc = GetComponent<AudioSource>();
+  //  }
 
-    // Update is called once per frame
-    void Update()
-    {
+   / // Update is called once per frame
+  //  void Update()
+    //{
         
-    }
+   // }
 
-    public static void PlaySound (string clip)
+   // public static void PlaySound (string clip)
     {
 
     }
