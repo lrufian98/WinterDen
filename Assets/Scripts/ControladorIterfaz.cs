@@ -10,9 +10,12 @@ public class ControladorIterfaz : MonoBehaviour
     public Animator animMenuMejora;
     public Animator animMenuExpediciones;
 
+    public GameObject canvasCompra;
+
     bool activaMenuAjustes = false;
     bool activaMenuMenus = false;
     bool activaMenuMejora = false;
+    bool activaMenuCompra = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,13 @@ public class ControladorIterfaz : MonoBehaviour
         
     }
 
+
+    public void ApareceMenuCompra()
+    {
+        activaMenuCompra = !activaMenuCompra;
+        canvasCompra.SetActive(activaMenuCompra);
+
+    }
 
     public void ApareceMenuMenus()
     {
