@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoGastoRecursos: 5
   vidaMaxConejo: 10
-  vidaActualConejo: 5
+  vidaActualConejo: 10
   regenerando: 0
   enCombate: 0
   miScript: {fileID: 1339867871566993827}
@@ -563,6 +563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaEncima: {fileID: 682407539}
   BVE: {fileID: 314402951}
+  BVidaInfo: {fileID: 0}
+  BVidaSalaConejos: {fileID: 0}
   statsPJ: {fileID: 1339867871566993827}
 --- !u!114 &3986625679230661267
 MonoBehaviour:
@@ -579,3 +581,5 @@ MonoBehaviour:
   PosicionExpediciones: {fileID: 0}
   puntoOrigen: {x: 0, y: 0, z: 0}
   HabitacionEntrada: {fileID: 0}
+  menuExpediciones: {fileID: 0}
+  textoExpediciones: {fileID: 0}
