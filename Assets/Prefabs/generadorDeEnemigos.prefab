@@ -46,5 +46,5 @@ MonoBehaviour:
   zorro1: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
   zorro2: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
   zorro3: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
-  maxTime: 30
+  maxTime: 300
   minTime: 1
