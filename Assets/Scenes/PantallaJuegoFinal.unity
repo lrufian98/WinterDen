@@ -1232,18 +1232,7 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1503553178722996661, guid: 3837f413b177d224982bb92ff45c876a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1187497405}
-    - target: {fileID: 855393509146363786, guid: 3837f413b177d224982bb92ff45c876a,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0.801
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1503553178229188115, guid: 3837f413b177d224982bb92ff45c876a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3837f413b177d224982bb92ff45c876a, type: 3}
 --- !u!1 &741725384
 GameObject:
