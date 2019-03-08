@@ -8,7 +8,7 @@ public class CamaraClick : MonoBehaviour, UnityEngine.EventSystems.IPointerClick
     public float duration = 20.0f;
     public float zoom = 2f;
     Camera camara;
-    
+   
     Vector3 posicionInicial;
 
     private float elapsed = 0.0f;
@@ -24,6 +24,8 @@ public class CamaraClick : MonoBehaviour, UnityEngine.EventSystems.IPointerClick
         {
             Debug.LogError("No se encuentra la camara");
         }
+
+       
     }
 
     // Update is called once per frame
