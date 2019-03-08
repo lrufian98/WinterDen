@@ -14,9 +14,7 @@ public class abrirInfoConejo : MonoBehaviour
 
     public Image BVE;
 
-    public Image BVidaInfo;
-
-    public Image BVidaSalaConejos;
+    Image BVidaInfo;
 
     Image barraA;
 
@@ -48,9 +46,13 @@ public class abrirInfoConejo : MonoBehaviour
         barraE = GameObject.Find("barraStatsFill E").GetComponent<Image>();
         barraS = GameObject.Find("barraStatsFill S").GetComponent<Image>();
 
+
+        nombreConejo = GameObject.Find("nombreConejo").GetComponent<Text>();
+
         nivel = GameObject.Find("nivel").GetComponent<Text>();
         nombreConejo = GameObject.Find("nombreConejo").GetComponent<Text>();
 
+        BVidaInfo = GameObject.Find("VidaFillConejo").GetComponent<Image>();
 
         animInfoConejo = GameObject.Find("fondoMenuConejo").GetComponent<Animator>();
     }
