@@ -9,6 +9,7 @@ public class FabricaHabitaciones : MonoBehaviour
     public GameObject HabComida;        //3
     public GameObject HabAgua;         //4
     public GameObject HabVeterinario;   //5
+    public GameObject HabAscensor;      //6
 
     public int numeroHab = 1; 
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class FabricaHabitaciones : MonoBehaviour
     {
         if(numeroHab == 1)
         {
-            if(ControladorDeRecursos.dinero -150 >= 0)
+           if(ControladorDeRecursos.dinero -150 >= 0)
             { 
             Instantiate(HabElectricidad, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 150;
@@ -74,6 +75,15 @@ public class FabricaHabitaciones : MonoBehaviour
             {
             Instantiate(HabVeterinario, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 400;
+            }
+        }
+
+        if (numeroHab == 6)
+        {
+            if (ControladorDeRecursos.dinero - 300 >= 0)
+            {
+                Instantiate(HabAscensor, posicion, transform.rotation);
+                ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 300;
             }
         }
     }

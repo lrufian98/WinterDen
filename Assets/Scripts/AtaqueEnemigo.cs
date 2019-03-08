@@ -11,18 +11,27 @@ public class AtaqueEnemigo : MonoBehaviour
     public float danoEnemigo;
     Animator animZorro;
     bool enCombate;
+    SpriteRenderer sprZorro;
+
     // Start is called before the first frame update
     void Start()
     {
         animZorro = GetComponent<Animator>();
+        sprZorro = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        Vector2 direction;
+        if (sprZorro.flipX)
+        {
+            direction = Vector2.right;
+        }
+        else
+            direction = Vector2.left;
 
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), 1, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1, layerMask);
 
 
 
@@ -30,7 +39,7 @@ public class AtaqueEnemigo : MonoBehaviour
 
         if (hit)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.yellow);
+            Debug.DrawRay(transform.position, direction * 1, Color.yellow);
             Debug.Log("Did Hit " + hit.transform.name);
 
             if (golpeado == null)
@@ -46,7 +55,7 @@ public class AtaqueEnemigo : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 1, Color.white);
+            Debug.DrawRay(transform.position, direction * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
             enCombate = false;
