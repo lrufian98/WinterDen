@@ -6,6 +6,7 @@ public class AtaqueEnemigo : MonoBehaviour
 {
 
     public LayerMask layerMask;
+    public LayerMask layerMask2;
 
     GameObject golpeado;
     public float danoEnemigo;
@@ -32,7 +33,7 @@ public class AtaqueEnemigo : MonoBehaviour
             direction = Vector2.left;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1, layerMask);
-
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, direction, 1, layerMask2);
 
 
 
@@ -52,6 +53,21 @@ public class AtaqueEnemigo : MonoBehaviour
             GetComponent<movimientoZorro>().velocidad = 0;
             animZorro.SetBool("EnCombate", enCombate);
 
+        }
+        else if (hit2)
+        {
+            Debug.DrawRay(transform.position, direction * 1, Color.yellow);
+            Debug.Log("Did Hit " + hit2.transform.name);
+
+            if (golpeado == null)
+            {
+                StartCoroutine(Atacando());
+                golpeado = hit2.collider.gameObject;
+
+            }
+            enCombate = true;
+            GetComponent<movimientoZorro>().velocidad = 0;
+            animZorro.SetBool("EnCombate", enCombate);
         }
         else
         {
@@ -73,8 +89,17 @@ public class AtaqueEnemigo : MonoBehaviour
         {
             if (golpeado != null)
             {
-                animZorro.SetTrigger("Ataque");
-                golpeado.GetComponent<EstadisticasPJ>().QuitaVida(danoEnemigo);
+                if (golpeado.gameObject.CompareTag("Conejos"))
+                {
+                    animZorro.SetTrigger("Ataque");
+                    golpeado.GetComponent<EstadisticasPJ>().QuitaVida(danoEnemigo);
+                }
+                if (golpeado.gameObject.CompareTag("PortonEntrada"))
+                {
+                    animZorro.SetTrigger("Ataque");
+                    VidaPuertaEntrada.vidaPuerta--;
+                }
+                
             }
             yield return new WaitForSeconds(2f);
         }

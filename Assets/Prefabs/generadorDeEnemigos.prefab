@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zorro1: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
-  zorro2: {fileID: 538034050778841571, guid: f355fccee3bcc524fbf268871420c425, type: 3}
-  zorro3: {fileID: 955808817491411454, guid: d24bb4a8ea90e064dbef335d3f260423, type: 3}
+  zorro2: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
+  zorro3: {fileID: 266253061244133923, guid: 896c2db1b3eb3914e88e287dc9964017, type: 3}
   maxTime: 30
   minTime: 1

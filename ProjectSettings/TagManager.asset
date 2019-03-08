@@ -17,6 +17,7 @@ TagManager:
   - HabitacionDelOlvido
   - HabitacionExpediciones
   - BebesConejos
+  - PortonEntrada
   layers:
   - Default
   - TransparentFX
