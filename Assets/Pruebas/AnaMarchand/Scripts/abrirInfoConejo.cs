@@ -14,6 +14,8 @@ public class abrirInfoConejo : MonoBehaviour
 
     public Image BVE;
 
+    Image BVidaInfo;
+
     Image barraA;
 
     Image barraC;
@@ -44,9 +46,13 @@ public class abrirInfoConejo : MonoBehaviour
         barraE = GameObject.Find("barraStatsFill E").GetComponent<Image>();
         barraS = GameObject.Find("barraStatsFill S").GetComponent<Image>();
 
+
+        nombreConejo = GameObject.Find("nombreConejo").GetComponent<Text>();
+
         nivel = GameObject.Find("nivel").GetComponent<Text>();
         nombreConejo = GameObject.Find("nombreConejo").GetComponent<Text>();
 
+        BVidaInfo = GameObject.Find("VidaFillConejo").GetComponent<Image>();
 
         animInfoConejo = GameObject.Find("fondoMenuConejo").GetComponent<Animator>();
     }
@@ -61,6 +67,7 @@ public class abrirInfoConejo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
         if(cerrarEstadisticas)
         {
@@ -74,7 +81,8 @@ public class abrirInfoConejo : MonoBehaviour
         AbreMenuInfo();
         Invoke("BarraVidaSuperior", 0.2f);
         PasaInfo();
-        
+
+
 
 
     }
@@ -102,6 +110,7 @@ public class abrirInfoConejo : MonoBehaviour
         barraE.fillAmount = statsPJ.energia / 10;
         barraS.fillAmount = statsPJ.suerte / 10;
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
+        BVidaInfo.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
         nivel.text = "NV " + statsPJ.nivelTotal;
         nombreConejo.text = statsPJ.nombre + " " + statsPJ.apellido;
     }
