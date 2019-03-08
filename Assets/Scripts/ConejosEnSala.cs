@@ -8,6 +8,8 @@ public class ConejosEnSala : MonoBehaviour
 
     public List<GameObject> conejosDentro;
     public List<string> apellidosDentro;
+    public List<string> NombresDentro;
+
 
     //public bool salaLlena = false;
 
@@ -28,7 +30,8 @@ public class ConejosEnSala : MonoBehaviour
         if (col.CompareTag("Conejos")) 
         {
             conejosDentro.Add(col.gameObject);
-            apellidosDentro.Add(col.gameObject.GetComponent<EstadisticasPJ>().apellido);               
+            apellidosDentro.Add(col.gameObject.GetComponent<EstadisticasPJ>().apellido);
+            NombresDentro.Add(col.gameObject.GetComponent<EstadisticasPJ>().nombre);
         }  
     }
 
@@ -38,6 +41,7 @@ public class ConejosEnSala : MonoBehaviour
         {            
             conejosDentro.Remove(col.gameObject);
             apellidosDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().apellido);
+            NombresDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().nombre);
         }
     }
     IEnumerator GastoElectricidad()

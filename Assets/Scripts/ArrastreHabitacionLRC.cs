@@ -57,6 +57,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             }
             
             enCombate = true;
+            CancelInvoke("EscribirEnCuaderno");
             animPJ.SetBool("EnCombate",enCombate);
         }
         else
@@ -64,6 +65,11 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             Debug.DrawRay(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction * 1, Color.white);
             Debug.Log("Did not Hit");
             golpeado = null;
+            if (enCombate == true)
+            {
+                vectorVelocidad.x = 1;
+                rb.AddForce(vectorVelocidad * velocidad);
+            }
             enCombate = false;
             animPJ.SetBool("EnCombate", enCombate);
             StopAllCoroutines();
@@ -158,7 +164,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     }
     public void RecibirDanoConejo()
     {
-        vectorVelocidad.x = 0;
+        
         animPJ.SetTrigger("Dano");
     }
 
@@ -180,6 +186,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
             if (golpeado != null)
             {
                 animPJ.SetTrigger("Punetazo");
+                golpeado.GetComponent<ZorroScript>().QuitaVida(3);
             }
             yield return new WaitForSeconds(2f);
         }

@@ -5,17 +5,18 @@ using UnityEngine;
 public class ControladorIterfaz : MonoBehaviour
 {
 
-    public Animator animMenuMenus;
+    
     public Animator animMenuAjustes;
     public Animator animMenuMejora;
     public Animator animMenuExpediciones;
+    public Animator animConejosEnSala;
 
     public GameObject canvasCompra;
 
     bool activaMenuAjustes = false;
-    bool activaMenuMenus = false;
+   
     bool activaMenuMejora = false;
-    bool activaMenuCompra = false;
+    bool activaConejosEnSala = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,20 +29,13 @@ public class ControladorIterfaz : MonoBehaviour
     {
         
     }
-
-
-    public void ApareceMenuCompra()
+    public void ApareceConejosEnSala()
     {
-        activaMenuCompra = !activaMenuCompra;
-        canvasCompra.SetActive(activaMenuCompra);
-
+        activaConejosEnSala = !activaConejosEnSala;
+        animConejosEnSala.SetBool("MenuActivo", activaConejosEnSala);
     }
 
-    public void ApareceMenuMenus()
-    {
-        activaMenuMenus = !activaMenuMenus;
-        animMenuMenus.SetBool("MenuActivo", activaMenuMenus);
-    }
+   
 
     public void ApareceMenuAjustes()
     {
