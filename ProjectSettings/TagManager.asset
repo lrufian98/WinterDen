@@ -17,6 +17,7 @@ TagManager:
   - HabitacionDelOlvido
   - HabitacionExpediciones
   - BebesConejos
+  - PortonEntrada
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Enemigos
   - Conejos
   - "Beb\xE9sConejo"
-  - 
+  - PuertaEntrada
   - 
   - 
   - 

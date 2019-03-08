@@ -9,7 +9,7 @@ public class ControladorJuego : MonoBehaviour
 
     public void CargaJuego()
     {
-        SceneManager.LoadScene("PantallaJuegoLuisRufian");
+        SceneManager.LoadScene("PantallaJuegoFinal");
     }
 
     public void CargaAjustes()

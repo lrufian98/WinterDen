@@ -169,6 +169,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  layerMask2:
+    serializedVersion: 2
+    m_Bits: 4096
   danoEnemigo: 2
 --- !u!114 &6791782898639154138
 MonoBehaviour:
