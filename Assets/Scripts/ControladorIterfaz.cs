@@ -11,6 +11,8 @@ public class ControladorIterfaz : MonoBehaviour
     public Animator animMenuExpediciones;
     public Animator animConejosEnSala;
 
+    public GameObject canvasCompra;
+
     bool activaMenuAjustes = false;
    
     bool activaMenuMejora = false;

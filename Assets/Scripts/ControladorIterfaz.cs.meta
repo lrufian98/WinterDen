@@ -3,7 +3,12 @@ guid: eec0a7ffbfb000c4e97d1482dcfe8e37
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animMenuMenus: {instanceID: 0}
+  - animMenuAjustes: {instanceID: 0}
+  - animMenuMejora: {instanceID: 0}
+  - animMenuExpediciones: {instanceID: 0}
+  - canvasCompra: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
