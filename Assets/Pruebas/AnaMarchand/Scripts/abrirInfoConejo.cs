@@ -65,6 +65,7 @@ public class abrirInfoConejo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
         if(cerrarEstadisticas)
         {
@@ -78,7 +79,8 @@ public class abrirInfoConejo : MonoBehaviour
         AbreMenuInfo();
         Invoke("BarraVidaSuperior", 0.2f);
         PasaInfo();
-        
+
+
 
 
     }
@@ -106,6 +108,7 @@ public class abrirInfoConejo : MonoBehaviour
         barraE.fillAmount = statsPJ.energia / 10;
         barraS.fillAmount = statsPJ.suerte / 10;
         BVE.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
+        BVidaInfo.fillAmount = statsPJ.vidaActualConejo / statsPJ.vidaMaxConejo;
         nivel.text = "NV " + statsPJ.nivelTotal;
         nombreConejo.text = statsPJ.nombre + " " + statsPJ.apellido;
     }
