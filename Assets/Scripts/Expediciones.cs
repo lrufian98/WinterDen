@@ -129,6 +129,7 @@ public class Expediciones : MonoBehaviour
                 Destroy(gameObject);
                 Debug.Log("NoVoyDeVuelta");
                 animacionMenuExpediciones.SetBool("MenuActivo", true);
+                textoRecompensa.text = "0";
                 textoExpediciones.text = 
                  "Salgo de la base." + "\n\r"
                  + "Le doy una patada a una piedra y me hago daño en el pie." + "\n\r"
