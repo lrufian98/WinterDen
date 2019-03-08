@@ -5,7 +5,8 @@ using UnityEngine;
 public class ControladorIterfaz : MonoBehaviour
 {
 
-    
+
+
     public Animator animMenuAjustes;
     public Animator animMenuMejora;
     public Animator animMenuExpediciones;
@@ -19,8 +20,12 @@ public class ControladorIterfaz : MonoBehaviour
     bool activaConejosEnSala = false;
 
     // Start is called before the first frame update
+
+   
+
     void Start()
     {
+
         
     }
 

@@ -9,13 +9,24 @@ public class HabitacionVacia : MonoBehaviour
     void Start()
     {
         scriptFabrica = transform.parent.gameObject.GetComponent<FabricaHabitaciones>();
+        if(scriptFabrica == null)
+        {
+            Debug.LogError("No se encuentra el objeto FabricaHabitaciones");
+        }
     }
 
     void OnMouseDown()
     {
           
         Debug.Log("Fabricando!!!");
-        scriptFabrica.FabricaHabitacion(transform.position);
-        Destroy(gameObject);
+        if (scriptFabrica.FabricaHabitacion(transform.position))
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("No se ha podido fabricar");
+        }
+        
     }
 }
