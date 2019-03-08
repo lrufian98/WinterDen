@@ -14,6 +14,10 @@ public class abrirInfoConejo : MonoBehaviour
 
     public Image BVE;
 
+    public Image BVidaInfo;
+
+    public Image BVidaSalaConejos;
+
     Image barraA;
 
     Image barraC;
