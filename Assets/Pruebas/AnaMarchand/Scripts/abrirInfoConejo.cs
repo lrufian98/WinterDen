@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class abrirInfoConejo : MonoBehaviour
 {
     
-    Animator animInfoConejo;
-    bool activaInfoConejo = false;
+    static Animator animInfoConejo;
+    static bool activaInfoConejo = false;
     public Animator vidaEncima;
     public static bool cerrarEstadisticas = false;
 
@@ -88,7 +88,7 @@ public class abrirInfoConejo : MonoBehaviour
     }
 
 
-    public void AbreMenuInfo()
+    public static void AbreMenuInfo()
     {
         activaInfoConejo = !activaInfoConejo;
         animInfoConejo.SetBool("MenuActivo", activaInfoConejo);

@@ -12,6 +12,7 @@ public class ControladorIterfaz : MonoBehaviour
     public Animator animMenuExpediciones;
     public Animator animConejosEnSala;
 
+    public abrirInfoConejo menuConejo;
     public GameObject canvasCompra;
 
     bool activaMenuAjustes = false;
@@ -40,6 +41,10 @@ public class ControladorIterfaz : MonoBehaviour
         animConejosEnSala.SetBool("MenuActivo", activaConejosEnSala);
     }
 
+    public void MenuConejos()
+    {
+        abrirInfoConejo.AbreMenuInfo();
+    }
    
 
     public void ApareceMenuAjustes()

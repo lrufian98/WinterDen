@@ -2298,6 +2298,7 @@ MonoBehaviour:
   animMenuMejora: {fileID: 0}
   animMenuExpediciones: {fileID: 1899842358}
   animConejosEnSala: {fileID: 0}
+  menuConejo: {fileID: 0}
   canvasCompra: {fileID: 0}
 --- !u!4 &1187497406
 Transform:
@@ -4881,6 +4882,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 610172248}
+    - target: {fileID: 5591195931960984692, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_Name
+      value: BotonCerrar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1187497405}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuConejos
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521061585539788925, guid: 2e7e522f0ee94e74498623e3766317b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7e522f0ee94e74498623e3766317b8, type: 3}
 --- !u!1001 &6988481732544285644
