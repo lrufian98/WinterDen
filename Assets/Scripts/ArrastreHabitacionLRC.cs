@@ -159,7 +159,10 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         {
             conejo.GetComponent<EstadisticasPJ>().felicidad-= 10;
         }
-
+        scriptSalas.conejosDentro.Remove(gameObject);
+        scriptSalas.apellidosDentro.Remove(GetComponent<EstadisticasPJ>().apellido);
+        scriptSalas.NombresDentro.Remove(GetComponent<EstadisticasPJ>().nombre);
+        rb.isKinematic = true;
         Destroy(gameObject, 5f);
     }
     public void RecibirDanoConejo()
