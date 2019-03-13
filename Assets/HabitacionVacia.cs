@@ -21,6 +21,7 @@ public class HabitacionVacia : MonoBehaviour
         Debug.Log("Fabricando!!!");
         if (scriptFabrica.FabricaHabitacion(transform.position))
         {
+            scriptFabrica.AbreCierraCuadricula();
             Destroy(gameObject);
         }
         else

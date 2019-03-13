@@ -13,6 +13,20 @@ public class FabricaHabitaciones : MonoBehaviour
     public bool millonario = true;
     int numeroHab = 0;
 
+    bool eligiendoCuadricula;
+    public SpriteRenderer cuadro1;
+    public SpriteRenderer cuadro2;
+    public SpriteRenderer cuadro3;
+    public SpriteRenderer cuadro4;
+    public SpriteRenderer cuadro5;
+    public SpriteRenderer cuadro6;
+    public SpriteRenderer cuadro7;
+    public SpriteRenderer cuadro8;
+    public SpriteRenderer cuadro9;
+    public SpriteRenderer cuadro10;
+
+    public Animator animMenu;
+
     bool activaConsHabitaciones = false;
     GameObject compra;
     // Start is called before the first frame update
@@ -29,7 +43,22 @@ public class FabricaHabitaciones : MonoBehaviour
     public void AbreCierraMenuInfo()
     {
         activaConsHabitaciones = !activaConsHabitaciones;
-        compra.SetActive(activaConsHabitaciones);
+        animMenu.SetBool("aparece",activaConsHabitaciones);
+
+    }
+    public void AbreCierraCuadricula()
+    {
+        if (cuadro1 != null) cuadro1.enabled = !cuadro1.enabled;
+        if (cuadro2 != null) cuadro2.enabled = !cuadro2.enabled;
+        if (cuadro3 != null) cuadro3.enabled = !cuadro3.enabled;
+        if (cuadro4 != null) cuadro4.enabled = !cuadro4.enabled;
+        if (cuadro5 != null) cuadro5.enabled = !cuadro5.enabled;
+        if (cuadro6 != null) cuadro6.enabled = !cuadro6.enabled;
+        if (cuadro7 != null) cuadro7.enabled = !cuadro7.enabled;
+        if (cuadro8 != null) cuadro8.enabled = !cuadro8.enabled;
+        if (cuadro9 != null) cuadro9.enabled = !cuadro9.enabled;
+        if (cuadro10 != null) cuadro10.enabled = !cuadro10.enabled;
+
 
     }
 
@@ -63,6 +92,7 @@ public class FabricaHabitaciones : MonoBehaviour
             }
             else
             {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
         }
@@ -77,6 +107,7 @@ public class FabricaHabitaciones : MonoBehaviour
             }
             else
             {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
         }
@@ -91,6 +122,7 @@ public class FabricaHabitaciones : MonoBehaviour
             }
             else
             {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
         }
@@ -105,6 +137,7 @@ public class FabricaHabitaciones : MonoBehaviour
             }
             else
             {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
         }
@@ -120,6 +153,7 @@ public class FabricaHabitaciones : MonoBehaviour
             }
             else
             {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
         }
@@ -133,6 +167,7 @@ public class FabricaHabitaciones : MonoBehaviour
                 fabricada = true;
             }
             else {
+                AbreCierraCuadricula();
                 Debug.Log("No hay dinero");
             }
             
