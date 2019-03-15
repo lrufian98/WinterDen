@@ -60,7 +60,9 @@ public class Expediciones : MonoBehaviour
         gameObject.transform.position = HabitacionEntrada.transform.position;
         Debug.Log("VoyDeVuelta");
         Recompensa();
-        
+
+        FindObjectOfType<AudioManager>().Play("PopUp");
+
     }
 
     void Recompensa()

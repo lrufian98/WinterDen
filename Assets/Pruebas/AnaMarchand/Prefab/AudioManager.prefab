@@ -46,25 +46,37 @@ MonoBehaviour:
   sounds:
   - name: Click
     clip: {fileID: 8300000, guid: 17fe4c76d0024df409248d7d485fb5e6, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: "M\xFAsicaAmbiente"
     clip: {fileID: 8300000, guid: ee8303e132d145842aa677252ae07257, type: 3}
-    volume: 0.8
+    volume: 1
     pitch: 1
     source: {fileID: 0}
     loop: 1
   - name: Construir
     clip: {fileID: 8300000, guid: 41bf1bb44574ef040857bbf6b1b30493, type: 3}
-    volume: 0.6
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: MuerteZorro
     clip: {fileID: 8300000, guid: fcc8acde7665c314089295c637be5a6a, type: 3}
-    volume: 0.6
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: "Da\xF1oConejo"
+    clip: {fileID: 8300000, guid: dd94b695458ca55419b90a0eb7fecb0a, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: PopUp
+    clip: {fileID: 8300000, guid: 68245e3a9f1460b43ab5a24ba9f81de8, type: 3}
+    volume: 1
     pitch: 1
     source: {fileID: 0}
     loop: 0
