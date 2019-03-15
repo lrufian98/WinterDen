@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4412b631101b024999c8b4a27d5668b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoNacimiento: 5
+  tiempoNacimiento: 60
   gazaposPrefab: {fileID: 8281598655792071834, guid: b4e7fb79c69c8284cac38d7e16d044fd,
     type: 3}
 --- !u!82 &1101843009316592366
