@@ -51,14 +51,20 @@ public class ControladorIterfaz : MonoBehaviour
     {
         activaMenuAjustes = !activaMenuAjustes;
         animMenuAjustes.SetBool("MenuActivo", activaMenuAjustes);
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void ApareceMenuMejora()
     {
         activaMenuMejora = !activaMenuMejora;
         animMenuMejora.SetBool("MenuActivo", activaMenuMejora);
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void DesapareceMenuExpediciones()
     {
         animMenuExpediciones.SetBool("MenuActivo", false);
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 }

@@ -169,6 +169,8 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     {
         
         animPJ.SetTrigger("Dano");
+
+        FindObjectOfType<AudioManager>().Play("DañoConejo");
     }
 
     public void VuelveAndar()

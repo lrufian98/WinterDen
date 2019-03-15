@@ -11,7 +11,7 @@ public class CrecimientoBebe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("CreceConejo", 5f);
+        Invoke("CreceConejo", 60f);
     }
 
     // Update is called once per frame
