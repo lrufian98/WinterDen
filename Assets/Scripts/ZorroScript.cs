@@ -52,6 +52,8 @@ public class ZorroScript : MonoBehaviour
         SaqueoDinero();
         Destroy(gameObject, 1f);
         animZorro.SetTrigger("Morir");
+
+        FindObjectOfType<AudioManager>().Play("MuerteZorro");
     }
 
 

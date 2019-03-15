@@ -92,12 +92,16 @@ public class abrirInfoConejo : MonoBehaviour
     {
         activaInfoConejo = !activaInfoConejo;
         animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 
     public void cierraMenuInfo()
     {
         activaInfoConejo = false;
         animInfoConejo.SetBool("MenuActivo", activaInfoConejo);
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 
     public void PasaInfo()

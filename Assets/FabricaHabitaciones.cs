@@ -45,6 +45,7 @@ public class FabricaHabitaciones : MonoBehaviour
         activaConsHabitaciones = !activaConsHabitaciones;
         animMenu.SetBool("aparece",activaConsHabitaciones);
 
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void AbreCierraCuadricula()
     {
@@ -89,6 +90,8 @@ public class FabricaHabitaciones : MonoBehaviour
             Instantiate(HabElectricidad, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 150;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else
             {
@@ -104,6 +107,8 @@ public class FabricaHabitaciones : MonoBehaviour
             Instantiate(HabDormitorios, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 170;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else
             {
@@ -119,6 +124,8 @@ public class FabricaHabitaciones : MonoBehaviour
             Instantiate(HabComida, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 125;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else
             {
@@ -134,6 +141,8 @@ public class FabricaHabitaciones : MonoBehaviour
             Instantiate(HabAgua, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 150;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else
             {
@@ -150,6 +159,8 @@ public class FabricaHabitaciones : MonoBehaviour
             Instantiate(HabVeterinario, posicion, transform.rotation);
             ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 400;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else
             {
@@ -165,6 +176,8 @@ public class FabricaHabitaciones : MonoBehaviour
                 Instantiate(HabAscensor, posicion, transform.rotation);
                 ControladorDeRecursos.dinero = ControladorDeRecursos.dinero - 300;
                 fabricada = true;
+
+                FindObjectOfType<AudioManager>().Play("Construir");
             }
             else {
                 AbreCierraCuadricula();
