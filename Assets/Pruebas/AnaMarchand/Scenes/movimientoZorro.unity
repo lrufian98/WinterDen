@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Habitacion Ascensor 2 Planta
       objectReference: {fileID: 0}
+    - target: {fileID: 5493680361599431676, guid: 27f800b0a3c51dd40a76ae994fc4505c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5493680361599431674, guid: 27f800b0a3c51dd40a76ae994fc4505c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -262,16 +267,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418189042477690495, guid: c43d027cdf4f7734b95102b59d7bacc4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610234798130353523, guid: c43d027cdf4f7734b95102b59d7bacc4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43d027cdf4f7734b95102b59d7bacc4, type: 3}
@@ -697,11 +692,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Habitacion Veterinario
       objectReference: {fileID: 0}
-    - target: {fileID: 2396605993260390146, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4846015031265316474, guid: abf70bec7e1253144b6c0afef20c906e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,51 +747,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5807074774309351722, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807074774309351722, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879579495206594080, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2243045089061755184, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456177739583863256, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460602372595948051, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460602372595948051, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843882588259070799, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 843882588259070799, guid: abf70bec7e1253144b6c0afef20c906e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf70bec7e1253144b6c0afef20c906e, type: 3}
 --- !u!1 &533703486 stripped
@@ -845,6 +790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396605993260390146, guid: abf70bec7e1253144b6c0afef20c906e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4846015031265316474, guid: abf70bec7e1253144b6c0afef20c906e,
         type: 3}
@@ -1058,6 +1008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Habitacion Electricidad
+      objectReference: {fileID: 0}
+    - target: {fileID: 446881530853989663, guid: ea472cb363a7a23478033cc051fa68a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7337027150599995093, guid: ea472cb363a7a23478033cc051fa68a7,
         type: 3}
