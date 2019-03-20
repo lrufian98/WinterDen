@@ -7,8 +7,8 @@ public class CrecimientoBebe : MonoBehaviour
     public GameObject conejoGrandePrefab;
     public string apellidoElegido;
     
-    
-    // Start is called before the first frame update
+    //Script que tienen los bebés conejos que nacen y hace que crezcan con uno de los apellidos de los padres
+
     void Start()
     {
         Invoke("CreceConejo", 60f);

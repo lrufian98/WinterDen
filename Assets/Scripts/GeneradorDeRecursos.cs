@@ -45,7 +45,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("HabitacionElectricidad"))        //Cuando el personaje entra y está en la habitación de electricidad activa un bool que indica que está dentro de la habitación de electricidad
-        {
+        {                                                               //y comienza a generar electricidad y a aumentar la experiencia de la estadística relacionada
 
             dentroElectricidad = true;
             if (!produciendo)
@@ -57,7 +57,8 @@ public class GeneradorDeRecursos : MonoBehaviour
 
         }
         if (col.gameObject.CompareTag("HabitacionComida"))        //Cuando el personaje entra y está en la habitación de comida activa un bool que indica que está dentro de la habitación de comida
-        {
+        {                                                         //y comienza a generar comida y a aumentar la experiencia de la estadística relacionada
+
 
             dentroComida = true;
             if (!produciendo)
@@ -68,8 +69,9 @@ public class GeneradorDeRecursos : MonoBehaviour
             }
 
         }
-        if (col.gameObject.CompareTag("HabitacionAgua"))        //Cuando el personaje entra y está en la habitación de comida activa un bool que indica que está dentro de la habitación de comida
-        {
+        if (col.gameObject.CompareTag("HabitacionAgua"))        //Cuando el personaje entra y está en la habitación de agua activa un bool que indica que está dentro de la habitación de agua
+        {                                                               //y comienza a generar agua y a aumentar la experiencia de la estadística relacionada
+
 
             dentroAgua = true;
             if (!produciendo)
@@ -80,8 +82,9 @@ public class GeneradorDeRecursos : MonoBehaviour
             }
 
         }
-        if (col.gameObject.CompareTag("HabitacionVeterinario"))
-        {
+        if (col.gameObject.CompareTag("HabitacionVeterinario"))         //Cuando el personaje entra y está en la habitación de vendas activa un bool que indica que está dentro de la habitación de vendas
+        {                                                               //y comienza a generar vendas y a aumentar la experiencia de la estadística relacionada
+
             dentroVet = true;
             if(!produciendo)
             {
@@ -92,7 +95,7 @@ public class GeneradorDeRecursos : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D col)             
+    private void OnTriggerExit2D(Collider2D col)             //detecta que el conejo ha salido de una habitación y desactiva todos los bools relacionados
     {
         if (
             col.gameObject.CompareTag("HabitacionElectricidad") || 
@@ -116,7 +119,7 @@ public class GeneradorDeRecursos : MonoBehaviour
     
     
 
-    IEnumerator generarRecursos()
+    IEnumerator generarRecursos()  //Corrutina para que los conejos generen los recursos dependiendo de en que habtación se encuentren y generando más recursos cuanto más nivel tengan
     {
         while (produciendo)
         {
@@ -161,7 +164,7 @@ public class GeneradorDeRecursos : MonoBehaviour
             }
         }
     }
-    IEnumerator generarExperiencia()
+    IEnumerator generarExperiencia()    //Corrutina para que cuando un conejo se encuentre dentro de cada habitación aumente la experiencia de la estadística relacionada
     {
         while (produciendo)
         {

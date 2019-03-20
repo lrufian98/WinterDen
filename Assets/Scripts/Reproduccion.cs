@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reproduccion : MonoBehaviour
+public class Reproduccion : MonoBehaviour   //Script de la habitación dormitorio para crear crías
 {
 
     ConejosEnSala scriptSalas;
@@ -23,7 +23,7 @@ public class Reproduccion : MonoBehaviour
     {
         
     }
-    IEnumerator NaceCrias()
+    IEnumerator NaceCrias() //Corrutina para que nazcan las crías, y se le guarde uno de los apellidos de los padres
     {
         yield return new WaitForSeconds(tiempoNacimiento);
         GameObject conejitoNuevo =  Instantiate(gazaposPrefab, transform.position, new Quaternion(0, 0, 0, transform.rotation.w));
@@ -33,7 +33,7 @@ public class Reproduccion : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("PopUp");
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)       //Cuando hay dos personajes en la sala lanza la corrutina anterior
     {
         if (col.CompareTag("Conejos"))
         {
@@ -44,7 +44,7 @@ public class Reproduccion : MonoBehaviour
             }
         }
     }
-    void OnTriggerExit2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col) //Cuando no hay dos personajes en sala se para la corrutina
     {
         if (scriptSalas.conejosDentro.Count < 2)
         {

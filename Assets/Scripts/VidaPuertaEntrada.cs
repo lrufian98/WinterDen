@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VidaPuertaEntrada : MonoBehaviour
+public class VidaPuertaEntrada : MonoBehaviour  //Cuando los zorros rompen la puerta de entrada, tras un tiempo se regenera
 {
 
     public static int vidaPuerta = 20;
@@ -20,7 +20,7 @@ public class VidaPuertaEntrada : MonoBehaviour
     {
         if (vidaPuerta <= 0 & regeneracion == false){
 
-            puertaAbierta.enabled = false;
+            puertaAbierta.enabled = false;          //Cuando la vida de la puerta baja a 0 se desactiva el collider
             regeneracion = true;
             Invoke("RegenerandoVida", 10f);
         } 

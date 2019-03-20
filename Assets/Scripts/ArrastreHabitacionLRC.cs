@@ -25,7 +25,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {                                                       //accedemos a los componentes                        
         rb = GetComponent<Rigidbody2D>();
         spritePJ = GetComponent<SpriteRenderer>();
         animPJ = GetComponent<Animator>();
@@ -33,12 +33,12 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 direction;
+        Vector2 direction;                  //Vector direccion que apunta a donde esté andando el personaje
         if (spritePJ.flipX)
             direction = Vector2.right;
         else
             direction = Vector2.left;
-
+                                                        //raycast para detectar a los zorros y combatir
         RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x,(transform.position.y + 0.5f),transform.position.z), direction, 1, layerMask);
 
 
@@ -76,8 +76,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)                //TriggerStay para detectar en que habitacion se encuentra cada personaje y guarda el gameobject
     {
         if (col.gameObject.CompareTag("HabitacionElectricidad")|| 
             col.gameObject.CompareTag("HabitacionAgua")|| 
@@ -105,7 +104,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     }
 
 
-    private void OnTriggerExit2D(Collider2D col)
+    private void OnTriggerExit2D(Collider2D col)            //TriggerExit para detectar que el personaje se encuentra fuera de una habitación
     {
         if (col.gameObject.CompareTag("HabitacionElectricidad")||
             col.gameObject.CompareTag("HabitacionComida")||
@@ -123,7 +122,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
     
 
 
-    void EscribirEnCuaderno()
+    void EscribirEnCuaderno()       //función que ejecuta la animación de escribir y lanza una función
     {
         animPJ.SetBool("Escribir",true);
         PararMovimiento();
@@ -131,7 +130,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
 
 
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D col)        //CollisionEnter para detectar que ha chocado con una pared de habitación, darse la vuelta y llamar a la función de escribir
     {
         if (col.gameObject.CompareTag("Pared"))
         {
@@ -141,39 +140,39 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         }
     }
 
-    public void PararMovimiento()
+    public void PararMovimiento()               //función que para al personaje y ejecuta en un rango aleatorio de tiempo la funcióon que reinicia el movimiento
     {
         vectorVelocidad.x = 0;
         Invoke("ReiniciarMovimiento", Random.Range(1f, 3f));
     }
-    public void MorirConejo()
+    public void MorirConejo()                 //función de morir
     {
         vectorVelocidad.x = 0;
-        animPJ.SetTrigger("Morir");
+        animPJ.SetTrigger("Morir");                     //reducimos velocidad a 0, lanzamos animación de morir y baja su felicidad a 0
         GetComponent<EstadisticasPJ>().felicidad = 0;
 
 
         GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
 
-        foreach(GameObject conejo in conejos)
+        foreach(GameObject conejo in conejos)                                   //Accede a la felicidad de cada uno de los conejos y les resta 10 de felicidad
         {
-            conejo.GetComponent<EstadisticasPJ>().felicidad-= 10;
+            conejo.GetComponent<EstadisticasPJ>().felicidad-= 10;               
         }
         scriptSalas.conejosDentro.Remove(gameObject);
-        scriptSalas.apellidosDentro.Remove(GetComponent<EstadisticasPJ>().apellido);
+        scriptSalas.apellidosDentro.Remove(GetComponent<EstadisticasPJ>().apellido);        //elimina al personaje de la lista de personajes de dentro de cada habitacion
         scriptSalas.NombresDentro.Remove(GetComponent<EstadisticasPJ>().nombre);
         rb.isKinematic = true;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 5f);                
     }
-    public void RecibirDanoConejo()
+    public void RecibirDanoConejo()         //Función de recibir daño, ejecuta la animación y reproduce el sonido
     {
         
-        animPJ.SetTrigger("Dano");
+        animPJ.SetTrigger("Dano");          
 
         FindObjectOfType<AudioManager>().Play("DañoConejo");
     }
 
-    public void VuelveAndar()
+    public void VuelveAndar()           //función que reninicia el movimiento cuando el personaje sale de combate
     {
         if (!enCombate)
         {
@@ -183,7 +182,7 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         
     }
 
-    IEnumerator ConejoAtacando()
+    IEnumerator ConejoAtacando()        //Corrutina de combate, en función de si el raycast detecta a un enemigo, accede a su script de vida y le quita
     {
         vectorVelocidad.x = 0;
         while (true)
@@ -206,12 +205,12 @@ public class ArrastreHabitacionLRC : MonoBehaviour
         
     }
 
-    private void OnMouseDrag()
+    private void OnMouseDrag()          //cuando se arrastra el dedo/raton, se lleva al personaje
     {
         gameObject.transform.position = Vector2.MoveTowards(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.5f);
 
     }
-    private void OnMouseUp()
+    private void OnMouseUp()     //si se suelta al personaje arrastrado fuera de una habitación, vuelve a la última en la que estuvo
     {
         if (fueraDeHabitacion)
         {

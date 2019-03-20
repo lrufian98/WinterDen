@@ -16,7 +16,7 @@ public class ConejosEnSala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GastoElectricidad());
+        StartCoroutine(GastoElectricidad()); //comienza la corrutina de gastar electricidad
     }
 
     // Update is called once per frame
@@ -24,8 +24,8 @@ public class ConejosEnSala : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter2D(Collider2D col)
+        
+    void OnTriggerEnter2D(Collider2D col)           //trigger para detectar los conejos de la sala, guardando su gameobject y sus nombres y apellidos en listas
     {
         if (col.CompareTag("Conejos")) 
         {
@@ -35,16 +35,16 @@ public class ConejosEnSala : MonoBehaviour
         }  
     }
 
-    void OnTriggerExit2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)            //trigger para detectar los conejos que salen de la sala, eliminando su gameobject y sus nombres y apellidos de las listas
     {
-        if (col.CompareTag("Conejos"))
+        if (col.CompareTag("Conejos"))             
         {            
             conejosDentro.Remove(col.gameObject);
             apellidosDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().apellido);
             NombresDentro.Remove(col.gameObject.GetComponent<EstadisticasPJ>().nombre);
         }
     }
-    IEnumerator GastoElectricidad()
+    IEnumerator GastoElectricidad()                 //Corrutina que gasta electricidad
     {
         while (true)
         {

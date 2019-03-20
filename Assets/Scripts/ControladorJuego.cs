@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControladorJuego : MonoBehaviour
+public class ControladorJuego : MonoBehaviour   //Script para gestionar el cambio entre pantallas
 {
     public void CargaJuego()
     {

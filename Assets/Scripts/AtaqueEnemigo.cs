@@ -24,14 +24,14 @@ public class AtaqueEnemigo : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 direction;
+        Vector2 direction;                                  //Vector direccion que apunta a donde esté andando el personaje
         if (sprZorro.flipX)
         {
             direction = Vector2.right;
         }
         else
             direction = Vector2.left;
-
+                                                            //Dos raycast para que los zorros ataquen a los conejos y a la puerta de la madriguera
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1, layerMask);
         RaycastHit2D hit2 = Physics2D.Raycast(transform.position, direction, 1, layerMask2);
 
@@ -83,7 +83,7 @@ public class AtaqueEnemigo : MonoBehaviour
     }
 
 
-    IEnumerator Atacando()
+    IEnumerator Atacando()              //Corrutina de combate, en función de si el raycast detecta a un conejo/puerta, accede a su script de vida y le quita un poco
     {
         while (true)
         {

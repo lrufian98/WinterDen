@@ -62,9 +62,9 @@ public class ControladorDeRecursos : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()                           
     {
-      if(vendasUI != null)
+      if(vendasUI != null)                                              //Se pasan las estadísticas de juego a la interfaz
         {
             vendasUI.text = vendas.ToString();
         }
@@ -86,7 +86,7 @@ public class ControladorDeRecursos : MonoBehaviour
         GameObject[] conejos = GameObject.FindGameObjectsWithTag("Conejos");
 
         felicidadTotal = 0;
-        foreach(GameObject conejo in conejos)
+        foreach(GameObject conejo in conejos)                                   //Se hace una media de la felicidad de los conejos, y en funcion del nivel de felicidad, aparece una cara u otra en la interfaz
         {
             felicidadTotal += conejo.GetComponent<EstadisticasPJ>().felicidad / conejos.Length;
         }
@@ -117,7 +117,7 @@ public class ControladorDeRecursos : MonoBehaviour
         GameObject.FindGameObjectsWithTag("Conejos");
     }
 
-    public void DineroExpedicion()
+    public void DineroExpedicion()                              //Estas funciones se crearon pero no se usan
     {
 
         dinero = dinero + Random.Range(250,1000);

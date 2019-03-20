@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EstadisticasPJ : MonoBehaviour
+public class EstadisticasPJ : MonoBehaviour     //Script que gestiona las estadísticas de los conejos
 {
 
     public float tiempoGastoRecursos = 5f;
@@ -78,24 +78,24 @@ public class EstadisticasPJ : MonoBehaviour
 
     }
 
-    void Start()
+    void Start()  
     {
-        StartCoroutine(GastoComida());
+        StartCoroutine(GastoComida());      //Comienzan corrutinas de gastar agua y electricidad
         StartCoroutine(GastoAgua());
 
-        StartCoroutine(FelicidadRecursos());
+        StartCoroutine(FelicidadRecursos());    //Corrutina que gestiona la felicidad en función de los recursos
 
         vidaActualConejo = vidaMaxConejo;
 
         aptitud = Random.Range(1, 4);
         carisma = Random.Range(1, 4);
         tecnica = Random.Range(1, 4);
-        inteligencia = Random.Range(1, 4);
+        inteligencia = Random.Range(1, 4);      //El conejo obtiene unas estadísticas aleatorias al aparecer
         vida = Random.Range(1, 4);
         energia = Random.Range(1, 4);
         suerte = Random.Range(1, 4);
 
-        nombre = listaNombres[Random.Range(0, 29)];
+        nombre = listaNombres[Random.Range(0, 29)];         //El conejo obtiene un nombre y un apellido random de una lista de 30 nombres y 30 apellidos
         if (apellido == "")
         {
             apellido = listaApellidos[Random.Range(0, 29)];
@@ -127,7 +127,7 @@ public class EstadisticasPJ : MonoBehaviour
         {
             if (energia < nivelMaximo)energia++;
             expEn = 0;
-            ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + energia;
+            ControladorDeRecursos.dinero = ControladorDeRecursos.dinero + 5 + energia;      //cuando la experiencia de cada estadistica llega al máximo se le suma un nivel y se obtinene una pequeña cantidad de dinero
         }
         if (expTec > expBase + expBase*tecnica)
         {
@@ -150,7 +150,7 @@ public class EstadisticasPJ : MonoBehaviour
             felicidad = 100;
         }
 
-
+        //Todo esto gestiona que si la comida, la electricidad y el agua bajan de un porcentaje, los conejos pierden felicidad con la corrutina de más abajo
         if (ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida <=1 && ControladorDeRecursos.comida / ControladorDeRecursos.capacidadComida >0.5)
         {
             nivelComida = 0;
@@ -220,14 +220,14 @@ public class EstadisticasPJ : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col) //suma 5 a la felicidad estar en el dormitorio
     {
         if (col.gameObject.CompareTag("HabitacionDormitorio"))
         {
             felicidad += +5;
         }
     }
-    void OnTriggerExit2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col) //resta 5 a la felicidad salir del dormitorio
     {
         if (col.gameObject.CompareTag("HabitacionDormitorio"))
         {
@@ -238,7 +238,7 @@ public class EstadisticasPJ : MonoBehaviour
     
 
 
-    IEnumerator RegenerarVida()
+    IEnumerator RegenerarVida() //corrutina para que los conejos recuperen vida
     {
         
         while (!enCombate && vidaActualConejo < vidaMaxConejo)
@@ -252,7 +252,7 @@ public class EstadisticasPJ : MonoBehaviour
         regenerando = false;
     }
 
-    IEnumerator FelicidadRecursos()
+    IEnumerator FelicidadRecursos()         //Esta corrutina gestiona mediante switches la felicidad de los conejos en función de la cantidad de los recursos
     {
         while (true)
         {
@@ -440,7 +440,7 @@ public class EstadisticasPJ : MonoBehaviour
         }
     }
 
-    public void UsaVendas()
+    public void UsaVendas()     //Función que cura al conejo cuandos se pulsa el botón
     {
         if (ControladorDeRecursos.vendas>0)
         {
@@ -459,7 +459,7 @@ public class EstadisticasPJ : MonoBehaviour
         }
 
     }
-    public void OnMouseDown()
+    public void OnMouseDown() //Cuando se le pulsa a un conejo, se guarda este script para pasarselo al botón de las vendas
     {
         scriptEnlaceUI.scriptPJ = miScript;
     }
@@ -498,7 +498,7 @@ public class EstadisticasPJ : MonoBehaviour
 
     }
 
-    public void QuitaVida(float cantidad) 
+    public void QuitaVida(float cantidad)  
     {
         vidaActualConejo -= cantidad;
         GetComponent<ArrastreHabitacionLRC>().RecibirDanoConejo();

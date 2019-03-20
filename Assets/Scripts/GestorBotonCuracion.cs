@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GestorBotonCuracion : MonoBehaviour
+public class GestorBotonCuracion : MonoBehaviour        //Cuando se pulsa el boton de las vendas se usa la funcion de curar al conejo seleccionado
 {
 
     public Button botonVendas;
@@ -21,7 +21,7 @@ public class GestorBotonCuracion : MonoBehaviour
 
     public void Curar()
     {
-        Debug.Log("Boton Pulsado");
+        Debug.Log("Boton Pulsado"); 
         if(scriptPJ != null)
         {
             scriptPJ.UsaVendas();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControladorIterfaz : MonoBehaviour
 {
-
+    //Script que abre y cierra los menús de la interfaz
 
 
     public Animator animMenuAjustes;
